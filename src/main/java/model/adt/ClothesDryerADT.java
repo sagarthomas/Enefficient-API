@@ -54,5 +54,10 @@ public class ClothesDryerADT extends ApplianceADT {
 	public String getDRY_CONTROL_LABEL_FR() {
 		return this.DRY_CONTROL_LABEL_FR;
 	}
+	
+	public String getConsumption() {
+		return this.AEC;
+	}
+	
 		
 }

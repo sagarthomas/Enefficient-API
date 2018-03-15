@@ -64,4 +64,8 @@ public class FreezerADT extends ApplianceADT {
 		return this.HR24_FREEZE_KG;
 	}
 	
+	public String getConsumption() {
+		return this.AEC;
+	}
+	
 }

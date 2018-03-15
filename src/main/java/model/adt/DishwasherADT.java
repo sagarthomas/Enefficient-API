@@ -54,4 +54,8 @@ public class DishwasherADT extends ApplianceADT {
 		return this.HW_CONSUMPT;
 	}
 	
+	public String getConsumption() {
+		return this.TAEC_C373_04;
+	}
+	
 }

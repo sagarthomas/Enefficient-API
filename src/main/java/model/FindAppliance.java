@@ -5,7 +5,7 @@ import model.adt.ApplianceADT;
 
 public class FindAppliance {
 	
-	public static void main(String[] args) {
+	/*public static void main(String[] args) {
 		ApplianceADT[] apps = new ApplianceADT[3];
 		
 		apps[0] = new ApplianceADT("AGE", "12345", "Elijah");
@@ -13,7 +13,7 @@ public class FindAppliance {
 		apps[2] = new ApplianceADT("Masure", "MASURE-99", "Elijah");
 		
 		System.out.println(find(apps, "Elijah", "99999"));
-	}
+	}*/
 	
 	public static ApplianceADT find(ApplianceADT[] appliances, String brand, String modelNum) {
 		 

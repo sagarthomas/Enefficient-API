@@ -93,4 +93,8 @@ public class OvenADT extends ApplianceADT {
 	public String getNOMINAL_WIDTH_LABEL_FR() {
 		return this.NOMINAL_WIDTH_LABEL_FR;
 	}
+	
+	public String getConsumption() {
+		return this.AEC_03;
+	}
 }

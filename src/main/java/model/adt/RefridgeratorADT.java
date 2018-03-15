@@ -89,5 +89,7 @@ public class RefridgeratorADT extends ApplianceADT {
 		return this.FREEZER_VOL_CUB;
 	}
 	
-	
+	public String getConsumption() {
+		return this.AEC;
+	}
 }

@@ -89,7 +89,7 @@ public class WasherADT extends ApplianceADT {
 		return this.ANNUAL_WATER_CON_L;
 	}
 	
-	
-	
-
+	public String getConsumption() {
+		return this.MOD_J1_AEC;
+	}
 }

@@ -109,4 +109,7 @@ public class WasherDryerADT extends ApplianceADT {
 		return this.DRYER_CONTROL_LABEL_FR;
 	}
 		
+	public String getConsumption() {
+		return this.AEC;
+	}
 }

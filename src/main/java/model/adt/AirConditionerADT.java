@@ -79,4 +79,7 @@ public class AirConditionerADT extends ApplianceADT {
 		return this.AMPS;
 	}
 	
+	public String getConsumption() {
+		return "Fix";
+	}
 }
