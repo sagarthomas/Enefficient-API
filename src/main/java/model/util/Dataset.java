@@ -7,6 +7,20 @@ import java.util.ArrayList;
 import model.adt.*;
 import com.google.gson.*;
 
+import org.bson.Document;
+import com.mongodb.BasicDBObject;
+import com.mongodb.DBCursor;
+import com.mongodb.MongoClient;
+import com.mongodb.MongoClientURI;
+import com.mongodb.client.FindIterable;
+import com.mongodb.client.MongoCollection;
+import com.mongodb.client.MongoDatabase;
+
+/**
+ * This class is used to retrieve the dataset information from the database
+ * @author Sagar Thomas
+ *
+ */
 public class Dataset {
 	// ArrayLists for appliances
 	private static final ArrayList<AirConditionerADT> AIRCONDITIONERS = new ArrayList<AirConditionerADT>();
@@ -22,38 +36,78 @@ public class Dataset {
 	
 	private static JsonParser parser;
 	private static Gson gson;
+	private static JsonObject[] data;
 	
-	public static void init() {
+	public static boolean init() {
 		parser = new JsonParser();
 		gson = new Gson();
+		data = new JsonObject [11];
 		
 		try {
-			JsonObject applianceData = parser.parse(new FileReader("src\\\\model\\\\data\\\\appliances.json")).getAsJsonObject();
+			// Create client to connect to the MongoDB database
+			MongoClient client = new MongoClient(new MongoClientURI("mongodb://admin:yohelpme@ds163918.mlab.com:63918/enefficient"));
+			// Create the database locally
+			MongoDatabase db = client.getDatabase("enefficient");
 			
-			populateACs(applianceData, gson);
-			populateCooktops(applianceData, gson);
-			populateDishwashers(applianceData, gson);
-			populateDishwashers(applianceData, gson);
-			populateDryers(applianceData, gson);
-			populateFreezers(applianceData, gson);
-			populateOvens(applianceData, gson);
-			populateRanges(applianceData, gson);
-			populateRefridgerators(applianceData, gson);
-			populateWasherDryers(applianceData, gson);
-			populateWashers(applianceData, gson);
+			for (String name : db.listCollectionNames()) {
+			    System.out.println(name);
+			}
+			
+			MongoCollection<Document> ovens = db.getCollection("ovens");
+			MongoCollection<Document> ac = db.getCollection("air-conditioning");
+			MongoCollection<Document> cooktops = db.getCollection("cooktops");
+			MongoCollection<Document> dishwashers = db.getCollection("dishwashers");
+			MongoCollection<Document> dryers = db.getCollection("dryers");
+			MongoCollection<Document> freezers = db.getCollection("freezers");
+			MongoCollection<Document> ranges = db.getCollection("ranges");
+			MongoCollection<Document> fridges = db.getCollection("refrigerators-wine-chiller");
+			MongoCollection<Document> washer_dryers = db.getCollection("washer-dryers");
+			MongoCollection<Document> washers = db.getCollection("washers");
+			
+			data[0] = parser.parse(new BasicDBObject(ovens.find().first()).toJson()).getAsJsonObject();
+			data[1] = parser.parse(new BasicDBObject(ac.find().first()).toJson()).getAsJsonObject();
+			data[2] = parser.parse(new BasicDBObject(cooktops.find().first()).toJson()).getAsJsonObject();
+			data[3] = parser.parse(new BasicDBObject(dishwashers.find().first()).toJson()).getAsJsonObject();
+			data[4] = parser.parse(new BasicDBObject(dryers.find().first()).toJson()).getAsJsonObject();
+			data[5] = parser.parse(new BasicDBObject(freezers.find().first()).toJson()).getAsJsonObject();
+			data[6] = parser.parse(new BasicDBObject(ranges.find().first()).toJson()).getAsJsonObject();
+			data[7] = parser.parse(new BasicDBObject(washer_dryers.find().first()).toJson()).getAsJsonObject();
+			data[8] = parser.parse(new BasicDBObject(washers.find().first()).toJson()).getAsJsonObject();
+			// Fridge data is in two seperate documents due to its size so retrival is a bit different
+			FindIterable<Document> documents = fridges.find();
+			int i = 0;
+			for (Document doc : documents) {
+				data[9 + i] = parser.parse(new BasicDBObject(doc).toJson()).getAsJsonObject();
+				i++;
+			}
 			
 			
-		} catch (FileNotFoundException e) {
-			System.out.println("File not found! " + e.getMessage());
-			e.printStackTrace();
+			
+			//JsonObject applianceData = parser.parse(new FileReader("src\\\\model\\\\data\\\\appliances.json")).getAsJsonObject();
+			
+			populateACs(data[1], gson);
+			populateCooktops(data[2], gson);
+			populateDishwashers(data[3], gson);
+			populateDryers(data[4], gson);
+			populateFreezers(data[5], gson);
+			populateOvens(data[0], gson);
+			populateRanges(data[6], gson);
+			populateRefridgerators(data[9], data[10], gson);
+			populateWasherDryers(data[7], gson);
+			populateWashers(data[8], gson);
+			
+		
 			
 		} catch (Exception e) {
 			e.printStackTrace();
+			return false;
 		}
 		
 		System.out.println("Data import and parsing successful!");
+		return true;
 		
 	}
+	
 	
 	private static void populateACs(JsonObject data, Gson extractor) {
 		
@@ -153,9 +207,11 @@ public class Dataset {
 		}
 	}
 	
-	private static void populateRefridgerators(JsonObject data, Gson extractor) {
+	private static void populateRefridgerators(JsonObject data1, JsonObject data2, Gson extractor) {
 		
-		JsonArray array = data.getAsJsonArray("refrigerators-wine-chiller");
+		JsonArray array = data1.getAsJsonArray("refrigerators-wine-chiller");
+		JsonArray array2 = data2.getAsJsonArray("fridges2");
+		array.addAll(array2);
 		
 		try {
 			for (JsonElement e : array) 
