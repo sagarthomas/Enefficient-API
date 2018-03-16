@@ -13,6 +13,8 @@ import model.FindAppliance;
 @RestController
 public class ControllerTest {
 		private static ApplianceADT[] app;
+		
+		private ClothesDryerADT found2;
     
 
     @RequestMapping("/find")
@@ -20,13 +22,9 @@ public class ControllerTest {
     	
     	//String myshoe = FindArray.getArray("Dryer");
     	
-    	app = new ApplianceADT[3];
+    	Dataset.init();
     	
-    	app[0] = new ClothesDryerADT("AGE", "12345", "Elijah", model, model, model, model, model, model, model, model, model);
-		app[1] = new ClothesDryerADT("Elijah", "99999", "Elijah", model, model, model, model, model, model, model, model, model);
-		app[2] = new ClothesDryerADT("AGE", "MASURE-99", "Elijah", model, model, model, model, model, model, model, model, model);
-    	
-    	
+    	    	
 		
 		switch(type) {
 			case "AirConditioner":
@@ -34,8 +32,10 @@ public class ControllerTest {
 				return new ApplianceReturn(found1.getBRAND_NAME(), found1.getMMODEL_NUM_1(), type, found1.getConsumption());
 		
 			case "Dryer":
-				ClothesDryerADT found2 = (ClothesDryerADT) FindAppliance.find(app, brand, model);
-				return new ApplianceReturn(found2.getBRAND_NAME(), found2.getMMODEL_NUM_1(), type, found2.getConsumption());
+				app = new ApplianceADT[Dataset.getDryers().size()];
+				Dataset.getDryers().toArray(app);
+				found2 = (ClothesDryerADT) FindAppliance.find(app, brand, model);
+				return new ApplianceReturn("GE", app[0].getMMODEL_NUM_1(), "Dryer", "100");//(found2.getBRAND_NAME(), found2.getMMODEL_NUM_1(), type, found2.getConsumption());
 				
 			case "Cooktop":
 				CooktopADT found3 = (CooktopADT) FindAppliance.find(app, brand, model);

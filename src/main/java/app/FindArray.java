@@ -1,6 +1,6 @@
 package app;
-
-import model.adt.ApplianceADT;
+import model.FindAppliance;
+import model.adt.*;
 import model.util.Dataset;
 
 public class FindArray {
@@ -9,7 +9,15 @@ public class FindArray {
 	
 	public static void main(String[] args) {
 		Dataset.init();
-		System.out.println(Dataset.getDryers());
+		
+		
+		array = new ClothesDryerADT[Dataset.getDryers().size()];
+		Dataset.getDryers().toArray(array);
+		
+		System.out.println(array[0].getBRAND_NAME());
+		ApplianceADT found = FindAppliance.find(array, "GE", "PCKS433ET#**");
+		System.out.println(found.getBRAND_NAME());
+		System.out.println(((ClothesDryerADT)found).getConsumption());
 	}
 	
 	public static ApplianceADT[] getArray(String type) {
@@ -17,7 +25,7 @@ public class FindArray {
 		switch(type) {
 		
 			case "Dryer":
-				array = new ApplianceADT[Dataset.getDryers().size()];
+				//array = new ApplianceADT[Dataset.getDryers().size()];
 				Dataset.getDryers().toArray(array);
 		}
 		

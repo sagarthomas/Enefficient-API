@@ -16,6 +16,8 @@ public class FindAppliance {
 	}*/
 	
 	public static ApplianceADT find(ApplianceADT[] appliances, String brand, String modelNum) {
+		
+		System.out.println(appliances.length);
 		 
 		if (findBrand(appliances, brand)[0] != -1 && findBrand(appliances, brand)[1] != -1 && findModel(appliances, modelNum, findBrand(appliances, brand)) != -1) {
 			return appliances[findModel(appliances, modelNum, findBrand(appliances, brand))];
@@ -41,6 +43,7 @@ public class FindAppliance {
 		// Find an index corresponding to an appliance with the desired brand name
 		int brandIndex = binarySearch(appliances, 0, appliances.length-1, brand);
 		
+		System.out.println(brandIndex);
 		int i = brandIndex;
 		int j = brandIndex;
 		
