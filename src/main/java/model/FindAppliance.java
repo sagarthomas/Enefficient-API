@@ -17,7 +17,7 @@ public class FindAppliance {
 	
 	public static ApplianceADT find(ApplianceADT[] appliances, String brand, String modelNum) {
 		
-		System.out.println(appliances.length);
+	
 		 
 		if (findBrand(appliances, brand)[0] != -1 && findBrand(appliances, brand)[1] != -1 && findModel(appliances, modelNum, findBrand(appliances, brand)) != -1) {
 			return appliances[findModel(appliances, modelNum, findBrand(appliances, brand))];
@@ -38,12 +38,11 @@ public class FindAppliance {
 		
 		// This two-element array will denote the start and end index of the section
 		// of the appliances array which have the desired brand name
-		int[] bounds = new int[2];
+		int[] bounds = {-1, -1};
 		
 		// Find an index corresponding to an appliance with the desired brand name
 		int brandIndex = binarySearch(appliances, 0, appliances.length-1, brand);
 		
-		System.out.println(brandIndex);
 		int i = brandIndex;
 		int j = brandIndex;
 		
@@ -52,17 +51,13 @@ public class FindAppliance {
 		// Look "up" and "down" for the first and last elements with the desired brand name
 		
 		while (true) {
-			
+						
 			i--;
 			if (i < 0 || i >= appliances.length || appliances[i].getBRAND_NAME().compareTo(brand) != 0) {
 				bounds[0] = i+1;
 				break;
 			}
 			
-			else {
-				bounds[0] = -1;
-				break;
-			}
 		}
 		
 		while (true) {
@@ -72,10 +67,6 @@ public class FindAppliance {
 				break;
 			}
 			
-			else {
-				bounds[1] = -1;
-				break;
-			}
 		}
 		
 		

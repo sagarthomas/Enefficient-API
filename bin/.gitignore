@@ -3,4 +3,9 @@
 /app/
 /model/
 /TestFindAppliance.class
+<<<<<<< HEAD
 /TestDataset.class
+=======
+/main/
+/test/
+>>>>>>> a0cc9f6edeba2fa893187182deed98697a68ef80

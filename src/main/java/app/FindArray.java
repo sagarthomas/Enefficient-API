@@ -2,6 +2,7 @@ package app;
 import model.FindAppliance;
 import model.adt.*;
 import model.util.Dataset;
+import model.util.MergeSort;
 
 public class FindArray {
 	
@@ -14,10 +15,16 @@ public class FindArray {
 		array = new ClothesDryerADT[Dataset.getDryers().size()];
 		Dataset.getDryers().toArray(array);
 		
-		System.out.println(array[0].getBRAND_NAME());
+		MergeSort.sort(array);
+		
+		for (int i = 0; i < array.length; i++) {
+			System.out.println(array[i].getBRAND_NAME());
+		}
+		
+		//System.out.println(array[0].getBRAND_NAME());
 		ApplianceADT found = FindAppliance.find(array, "GE", "PCKS433ET#**");
 		System.out.println(found.getBRAND_NAME());
-		System.out.println(((ClothesDryerADT)found).getConsumption());
+		//System.out.println(((ClothesDryerADT)found).getConsumption());
 	}
 	
 	public static ApplianceADT[] getArray(String type) {
