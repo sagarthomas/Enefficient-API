@@ -17,14 +17,11 @@ public class FindArray {
 		
 		MergeSort.sort(array);
 		
-		for (int i = 0; i < array.length; i++) {
-			System.out.println(array[i].getBRAND_NAME());
-		}
 		
 		//System.out.println(array[0].getBRAND_NAME());
 		ApplianceADT found = FindAppliance.find(array, "GE", "PCKS433ET#**");
 		System.out.println(found.getBRAND_NAME());
-		//System.out.println(((ClothesDryerADT)found).getConsumption());
+		System.out.println(((ClothesDryerADT)found).getConsumption());
 	}
 	
 	public static ApplianceADT[] getArray(String type) {

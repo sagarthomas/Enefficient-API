@@ -8,13 +8,14 @@ import org.springframework.web.bind.annotation.RestController;
 import model.adt.*;
 import model.adt.ClothesDryerADT;
 import model.util.Dataset;
+import model.util.MergeSort;
 import model.FindAppliance;
 
 @RestController
 public class ControllerTest {
 		private static ApplianceADT[] app;
 		
-		private ClothesDryerADT found2;
+		
     
 
     @RequestMapping("/find")
@@ -24,6 +25,8 @@ public class ControllerTest {
     	
     	Dataset.init();
     	
+    	
+    	
     	    	
 		
 		switch(type) {
@@ -32,10 +35,12 @@ public class ControllerTest {
 				return new ApplianceReturn(found1.getBRAND_NAME(), found1.getMMODEL_NUM_1(), type, found1.getConsumption());
 		
 			case "Dryer":
-				app = new ApplianceADT[Dataset.getDryers().size()];
+				app = new ClothesDryerADT[Dataset.getDryers().size()];
 				Dataset.getDryers().toArray(app);
-				found2 = (ClothesDryerADT) FindAppliance.find(app, brand, model);
-				return new ApplianceReturn("GE", app[0].getMMODEL_NUM_1(), "Dryer", "100");//(found2.getBRAND_NAME(), found2.getMMODEL_NUM_1(), type, found2.getConsumption());
+				MergeSort.sort(app);
+				ApplianceADT found2 = FindAppliance.find(app, brand, model);
+				System.out.println(model);
+				return new ApplianceReturn(found2.getBRAND_NAME(), found2.getMMODEL_NUM_1() , type, ((ClothesDryerADT)found2).getConsumption());//(found2.getBRAND_NAME(), found2.getMMODEL_NUM_1(), type, found2.getConsumption());
 				
 			case "Cooktop":
 				CooktopADT found3 = (CooktopADT) FindAppliance.find(app, brand, model);
