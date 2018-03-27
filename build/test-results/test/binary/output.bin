@@ -1,467 +1,469 @@
-á22:18:14.769 [Test worker] INFO org.mongodb.driver.cluster - Cluster created with settings {hosts=[ds163918.mlab.com:63918], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
-»22:18:14.802 [Test worker] DEBUG org.mongodb.driver.cluster - Updating cluster description to  {type=UNKNOWN, servers=[{address=ds163918.mlab.com:63918, type=UNKNOWN, state=CONNECTING}]
-Œ22:18:14.815 [Test worker] INFO org.mongodb.driver.cluster - Cluster description not yet available. Waiting for 30000 ms before timing out
-ò22:18:15.104 [cluster-ClusterId{value='5aab296609e9c4236c41b3e8', description='null'}-ds163918.mlab.com:63918] INFO org.mongodb.driver.connection - Opened connection [connectionId{localValue:1, serverValue:70204}] to ds163918.mlab.com:63918
-¾22:18:15.105 [cluster-ClusterId{value='5aab296609e9c4236c41b3e8', description='null'}-ds163918.mlab.com:63918] DEBUG org.mongodb.driver.cluster - Checking status of ds163918.mlab.com:63918
-£22:18:15.136 [cluster-ClusterId{value='5aab296609e9c4236c41b3e8', description='null'}-ds163918.mlab.com:63918] INFO org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=ds163918.mlab.com:63918, type=REPLICA_SET_PRIMARY, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 13]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=null, roundTripTimeNanos=27841580, setName='rs-ds163918', canonicalAddress=ds163918-a.mlab.com:63918, hosts=[ds163918-a.mlab.com:63918], passives=[], arbiters=[], primary='ds163918-a.mlab.com:63918', tagSet=TagSet{[]}, electionId=7fffffff0000000000000001, setVersion=1, lastWriteDate=Thu Mar 15 22:18:07 EDT 2018, lastUpdateTimeNanos=117930576493827}
-µ22:18:15.137 [cluster-ClusterId{value='5aab296609e9c4236c41b3e8', description='null'}-ds163918.mlab.com:63918] DEBUG org.mongodb.driver.cluster - Updating cluster description to  {type=REPLICA_SET, servers=[{address=ds163918.mlab.com:63918, type=REPLICA_SET_PRIMARY, roundTripTime=27.8 ms, state=CONNECTED}]
-ž22:18:15.382 [Test worker] INFO org.mongodb.driver.connection - Opened connection [connectionId{localValue:2, serverValue:70205}] to ds163918.mlab.com:63918
-÷22:18:15.388 [Test worker] DEBUG org.mongodb.driver.protocol.command - Sending command {listCollections : BsonInt32{value=1}} to database enefficient on connection [connectionId{localValue:2, serverValue:70205}] to server ds163918.mlab.com:63918
-d22:18:15.421 [Test worker] DEBUG org.mongodb.driver.protocol.command - Command execution completed
-ø22:18:15.423 [Test worker] DEBUG org.mongodb.driver.protocol.command - Sending command {getMore : BsonInt64{value=4801560764}} to database enefficient on connection [connectionId{localValue:2, serverValue:70205}] to server ds163918.mlab.com:63918
-d22:18:15.455 [Test worker] DEBUG org.mongodb.driver.protocol.command - Command execution completed
-refrigerators-wine-chiller
-dishwashers
-
+„{"uid":"yoo","email":"yohelpme@help.com","score":0.0,"appliances":[{"BRAND_NAME":"Woo","MODEL_NUM_1":"LP6","REC_REF_KEY":"nice"}]}
+117911
+á16:37:09.682 [Test worker] INFO org.mongodb.driver.cluster - Cluster created with settings {hosts=[ds163918.mlab.com:63918], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+»16:37:09.750 [Test worker] DEBUG org.mongodb.driver.cluster - Updating cluster description to  {type=UNKNOWN, servers=[{address=ds163918.mlab.com:63918, type=UNKNOWN, state=CONNECTING}]
+Œ16:37:09.769 [Test worker] INFO org.mongodb.driver.cluster - Cluster description not yet available. Waiting for 30000 ms before timing out
+ó16:37:10.393 [cluster-ClusterId{value='5abaab75286c3f3b345593be', description='null'}-ds163918.mlab.com:63918] INFO org.mongodb.driver.connection - Opened connection [connectionId{localValue:1, serverValue:200516}] to ds163918.mlab.com:63918
+¾16:37:10.394 [cluster-ClusterId{value='5abaab75286c3f3b345593be', description='null'}-ds163918.mlab.com:63918] DEBUG org.mongodb.driver.cluster - Checking status of ds163918.mlab.com:63918
+¢16:37:10.433 [cluster-ClusterId{value='5abaab75286c3f3b345593be', description='null'}-ds163918.mlab.com:63918] INFO org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=ds163918.mlab.com:63918, type=REPLICA_SET_PRIMARY, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 13]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=null, roundTripTimeNanos=31861283, setName='rs-ds163918', canonicalAddress=ds163918-a.mlab.com:63918, hosts=[ds163918-a.mlab.com:63918], passives=[], arbiters=[], primary='ds163918-a.mlab.com:63918', tagSet=TagSet{[]}, electionId=7fffffff0000000000000001, setVersion=1, lastWriteDate=Tue Mar 27 16:37:06 EDT 2018, lastUpdateTimeNanos=89944274284998}
+µ16:37:10.435 [cluster-ClusterId{value='5abaab75286c3f3b345593be', description='null'}-ds163918.mlab.com:63918] DEBUG org.mongodb.driver.cluster - Updating cluster description to  {type=REPLICA_SET, servers=[{address=ds163918.mlab.com:63918, type=REPLICA_SET_PRIMARY, roundTripTime=31.9 ms, state=CONNECTED}]
+Ÿ16:37:10.705 [Test worker] INFO org.mongodb.driver.connection - Opened connection [connectionId{localValue:2, serverValue:200517}] to ds163918.mlab.com:63918
+ø16:37:10.715 [Test worker] DEBUG org.mongodb.driver.protocol.command - Sending command {listCollections : BsonInt32{value=1}} to database enefficient on connection [connectionId{localValue:2, serverValue:200517}] to server ds163918.mlab.com:63918
+d16:37:10.747 [Test worker] DEBUG org.mongodb.driver.protocol.command - Command execution completed
+ù16:37:10.752 [Test worker] DEBUG org.mongodb.driver.protocol.command - Sending command {getMore : BsonInt64{value=7463054842}} to database enefficient on connection [connectionId{localValue:2, serverValue:200517}] to server ds163918.mlab.com:63918
+d16:37:10.781 [Test worker] DEBUG org.mongodb.driver.protocol.command - Command execution completed
+refrigerators-wine-chiller
+dishwashers
+
 freezers
-washer-dryers
-ranges
-dryers
-	washers
-ovens
-
+washer-dryers
+ranges
+dryers
+	washers
+ovens
+
 cooktops
-system.indexes
-air-conditioning
-ó22:18:15.470 [Test worker] DEBUG org.mongodb.driver.protocol.command - Sending command {find : BsonString{value='ovens'}} to database enefficient on connection [connectionId{localValue:2, serverValue:70205}] to server ds163918.mlab.com:63918
-d22:18:15.644 [Test worker] DEBUG org.mongodb.driver.protocol.command - Command execution completed
-þ22:18:15.717 [Test worker] DEBUG org.mongodb.driver.protocol.command - Sending command {find : BsonString{value='air-conditioning'}} to database enefficient on connection [connectionId{localValue:2, serverValue:70205}] to server ds163918.mlab.com:63918
-d22:18:15.931 [Test worker] DEBUG org.mongodb.driver.protocol.command - Command execution completed
-ö22:18:15.978 [Test worker] DEBUG org.mongodb.driver.protocol.command - Sending command {find : BsonString{value='cooktops'}} to database enefficient on connection [connectionId{localValue:2, serverValue:70205}] to server ds163918.mlab.com:63918
-d22:18:16.014 [Test worker] DEBUG org.mongodb.driver.protocol.command - Command execution completed
-ù22:18:16.018 [Test worker] DEBUG org.mongodb.driver.protocol.command - Sending command {find : BsonString{value='dishwashers'}} to database enefficient on connection [connectionId{localValue:2, serverValue:70205}] to server ds163918.mlab.com:63918
-d22:18:16.112 [Test worker] DEBUG org.mongodb.driver.protocol.command - Command execution completed
-ô22:18:16.121 [Test worker] DEBUG org.mongodb.driver.protocol.command - Sending command {find : BsonString{value='dryers'}} to database enefficient on connection [connectionId{localValue:2, serverValue:70205}] to server ds163918.mlab.com:63918
-d22:18:16.532 [Test worker] DEBUG org.mongodb.driver.protocol.command - Command execution completed
-ö22:18:16.537 [Test worker] DEBUG org.mongodb.driver.protocol.command - Sending command {find : BsonString{value='freezers'}} to database enefficient on connection [connectionId{localValue:2, serverValue:70205}] to server ds163918.mlab.com:63918
-d22:18:16.730 [Test worker] DEBUG org.mongodb.driver.protocol.command - Command execution completed
-ô22:18:16.737 [Test worker] DEBUG org.mongodb.driver.protocol.command - Sending command {find : BsonString{value='ranges'}} to database enefficient on connection [connectionId{localValue:2, serverValue:70205}] to server ds163918.mlab.com:63918
-d22:18:16.862 [Test worker] DEBUG org.mongodb.driver.protocol.command - Command execution completed
-û22:18:16.871 [Test worker] DEBUG org.mongodb.driver.protocol.command - Sending command {find : BsonString{value='washer-dryers'}} to database enefficient on connection [connectionId{localValue:2, serverValue:70205}] to server ds163918.mlab.com:63918
-d22:18:16.908 [Test worker] DEBUG org.mongodb.driver.protocol.command - Command execution completed
-õ22:18:16.910 [Test worker] DEBUG org.mongodb.driver.protocol.command - Sending command {find : BsonString{value='washers'}} to database enefficient on connection [connectionId{localValue:2, serverValue:70205}] to server ds163918.mlab.com:63918
-d22:18:17.044 [Test worker] DEBUG org.mongodb.driver.protocol.command - Command execution completed
-ˆ22:18:17.053 [Test worker] DEBUG org.mongodb.driver.protocol.command - Sending command {find : BsonString{value='refrigerators-wine-chiller'}} to database enefficient on connection [connectionId{localValue:2, serverValue:70205}] to server ds163918.mlab.com:63918
-d22:18:17.781 [Test worker] DEBUG org.mongodb.driver.protocol.command - Command execution completed
-%Data import and parsing successful!
-HI
-Staber HXW2304
-Staber HXW2404
-Staber HXW2504
-GE WCVH4800****
-LG WM8000H**
-GE GFWS1500D***
-LG WM4070H**
-LG WT1101C*
-LG WT1201C*
-Ariston ARWXF129W#
-Ariston ARWL129#
-Ariston ARWL129S#
-Kenmore 592-2921*
-Kenmore 592-2922*
-Whirlpool CAE2743B#**
-Whirlpool CAE2763B#**
-Whirlpool CAE2793B#**
-Kenmore 2712*31+
-Huebsch HWNBD2SP112****
-Huebsch HWNBX2SP112****
-Huebsch HWNBY2SP112****
-Huebsch HWNMN2SP112****
-Huebsch HWNSX1SP112****
-Huebsch HWNSX2SP112****
-IPSO BWNMN2PP112****
-IPSO BWNSX2PP112****
-Unimac UWNMN2SP112****
-LG WM3650H**
-Maytag MVW18MNA#**
-Maytag MVW18CSA#**
-Whirlpool CAE2733B#**
-Speed Queen QCAE2733B#**
-Moffat MTAP1100F
-Maytag MVW18PDA#**
-Maytag MVW18PDAX#*
-Maytag MVW18PRA#**
-LG WT5680H*A
-LG WM3250H*A
-LG WM3050C*
-Danby DWM17WDB
-LG WT1701C*
-LG WM8500H**
-Huebsch HWNBE2SP112****
-LG GCWP1069***
-LG TCW2013***
-Samsung WA45H72**A*
-Samsung WA45H70**A*
-Samsung WF42H55**A*
-Samsung WF42H52**A*
-Samsung WF42H51**A*
-Samsung WF42H50**A*
-Samsung WF42H57**A*
-Samsung WF42H56**A*
-Samsung WF45H61**A*
-Samsung WF45H63**A*
-Samsung WA56H90**A*
-Maytag MLE20PDAY*+
-Maytag MLG20PDAW*+
-Maytag MLE20PDAZ*+
-LG WM3570H*A
-Kenmore 592-4942*
-Kenmore 592-4941*
-Kenmore 592-4945*
-Kenmore 592-4944*
-Samsung WF56H91**A*
-LG WM1377H*
-Whirlpool WFW72HED*+
-LG WT5270C*
-Maytag MXS20PNA*+
-Maytag MXS20PDA*+
-Maytag MXS25PDA*+
-Maytag MXS30PDA*+
-Maytag MHN30PDCW*+
-Maytag MHN30PDCX*+
-Maytag MHN30PRCW*+
-Maytag MLE20PDCW*+
-Maytag MLE20PDCZ*+
-Maytag MLE20PRCY*+
-Maytag MLE20PRCZ*+
-Maytag MLG20PDCW*+
-Maytag MLG20PRCW*+
-Kenmore 592-2933*
-Whirlpool CHW8990C*+
-Whirlpool CET8000C*+
-Whirlpool CGT8000C*+
-Kenmore 592-4946*
-Kenmore 592-4947*
-Kenmore 592-4948*
-Kenmore 592-4949*
-Maytag MVW18CSBW*+
-Maytag MVW18MNBW*+
-Maytag MVW18PDBW*+
-Maytag MVW18PDBX*+
-Whirlpool CAE2763C*+
-LG WT1801H*A
-LG WT5480C*
-LG WM4270H*A
-Kenmore 3146####
-Kenmore 3142####
-LG WM3370H*A
-LG WM3170C*
-Whirlpool WTW5000D*+
-Maytag MVWC555D*+
-Maytag MVWX655D*+
-Kenmore 2513*41+
-LG WT7700H*A
-Bosch WAP24200UC
-Bosch WAP24201UC
-Bosch WAP24202UC
-Maytag MVW18PDAX*+
-Speed Queen QCAE2733B*+
-Whirlpool WTW8500D*+
-Whirlpool WTW8000D*+
-GE WSLP1500H***
-GE WSLS1500H***
-Whirlpool CHW9060A*+
-Whirlpool CHW9050A*+
-Huebsch ZWNE82SP113+
-Huebsch YWNE52PP113+
-Huebsch ZFNE9BSP113+
-Huebsch YFNE5BJP113+
-Huebsch YFNE5RSP113+
-Unimac UFNE5BJP113+
-IPSO BFNE6BJP113+
-Huebsch HWNN*2SP113+
-Huebsch HFNB*ASG113+
-Huebsch HFNB*ASP113+
-Huebsch HFNB*RSP113+
-Huebsch HFNN*ASP113+
-Huebsch HFNN*RSP113+
-Huebsch HFNS*RSP113+
-IPSO BFNB*ASP113+
-LG WT901C*
-Kenmore 2234*51+
-Kenmore 2244*51+
-Kenmore 2022*51+
-Kenmore 514*51+
-Kenmore 2233*51+
-Kenmore 2024*51+
-Amana NTW4755E*+
-Whirlpool WTW7000D*+
-Whirlpool WTW7300D*+
-Avanti TLW30W
-Avanti TLW09W
-Frigidaire FFLG4033***
-Frigidaire FFLG3911***
-Kenmore 2813*41+
-Kenmore 2913*41+
-Kenmore 2613*41+
-Kenmore 2713*41+
-LG WM3475H*A
-LG WM3175C*
-GE GTW180S*J***
-Samsung WA40J300*A*
-Fisher & Paykel WL4027P*
-Fisher & Paykel WL4027J*
-Whirlpool YWET4024E*+
-Kenmore C268143*51+
-Whirlpool YWET4027E*+
-Whirlpool WGT4027E*+
-Amana NFW5800D*+
-Maytag MVWB755D*+
-Maytag MVWB835D*+
-Maytag MVWB855D*+
-Maytag MVWP475E*+
-Electrolux EIFLS20****
-GE WCVH4800****
-GE GFWN1100H***
-GE GFWH1200H***
-GE GFWS1700H***
-GE GFWS1705H***
-Whirlpool WFC7500V*+
-Maytag MHWC7500Y*+
-Frigidaire FFFS5115***
-Frigidaire FFFW5100***
-Crosley CFW7400***
-Frigidaire FFFW5000***
-Kenmore 970L4845****
-Kenmore 970L4842****
-Electrolux EIFLS60****
-Frigidaire FFLG2022***
-Frigidaire FAHE1011***
-Fisher & Paykel WA3927G*
-Ariston ARWXF129WNA.1
-Ariston ARWL129NA.1
-Ariston ARWL129SNA.1
-Frigidaire FFTW1001***
-Whirlpool WTW4850B**
-Maytag 2210*31*
-Whirlpool WTW8700E**
-LG WT1301C*
-Bosch WAT28400UC
-Bosch WAT28401UC
-Bosch WAT28402UC
-Haier HLP24E
-Haier HLP21N
-Haier HLTW500AXW
-Electrolux EIFLS55****
-Electrolux EIFLW50****
-Frigidaire FAHE4045***
-Inglis ITW4671E**
-Inglis ITW4771E**
-Inglis ITW4971E**
-GE GTW860S*J***
-GE GTW810S*J***
-Blomberg WM98400SX
-Blomberg WM98200SX
-Beko WMY10148C0
-Beko WMY10148W0
-Blomberg WM77120
-Beko WTE7604XLW0
-GE GFWN1600J***
-Haier HLPW028AXW
-GE GFWN1300J***
-Samsung WF36J40**A*
-LG WT1501C*
-LG WD100C*
-LG WD200C*
-LG WM9000H*A
-LG WT7710H*A
-GE GTW680BSJ***
-GE GTW485ASJ***
-GE GTW460ASJ***
-LG WM5000H*A
-GE GTW490ACJ***
-Haier HLTW600AXW
-Maytag MVWC415E*+
-Amana NTW4605E*+
-Amana NTW4615E*+
-Amana NTW4655E*+
-Amana NTW4705E*+
-Whirlpool WTW4815E*+
-Whirlpool WTW4915E*+
-Frigidaire CFW4900***
-GE GTW460AMJ***
-Crosley CFWH7300***
-Miele W1753
-Miele W3048
-Miele PW6068
-Maytag MHN33PDCW**
-Maytag MHN33PRCW**
-Midea US-FC70-DS12DSH/C0401E
-Maytag MVWB865F**
-Whirlpool WFW9290F**
-Whirlpool WFW7590F**
-Electrolux EWFLS70****
-Primus PFNE3BJP113+
-Primus PFNE3RSP113+
-Huebsch ZWN432SP113**04
-Huebsch YWN432SP113**04
-EuroDesign DWN432SP113**04
-Primus PWNE32PP113+
-IPSO BFNB*ASG113+
-Huebsch HFNK*ASG113+
-Huebsch HFNK*ASP113+
-Huebsch HFNN*BSP113+
-Primus PFNJXASG114+
-Primus PFNJXASP114+
-Primus PWNB*2PP112+
-Whirlpool WFW75HEF**
-Whirlpool WFW7540F**
-Samsung WA52J870*A*
-GE WW22K680*A*
-Samsung WA50K86**A*
-Fisher & Paykel WL4027G*
-Maytag MHW5500F**
-Maytag MHW8200F**
-Maytag MHW3505F**
-Whirlpool WFW90HEF**
-Whirlpool WFW92HEF**
-Maytag MHW3500F**
-LG WD205C*
-Huebsch HWNN*2AP113**04
-Huebsch HWNN*2AP113**17
-Huebsch HWNN*2HP113**04
-Kenmore 3163*61*
-LG WT7600H*A
-LG WT7500C*
-LG WM3575C*
-Kenmore 3142#
-Kenmore 3146#
-Kenmore 5197#
-Kenmore 5199#
-LG WM3770H*A
-LG WM3670H*A
-Kenmore 4139#
-Kenmore 4126#
-Kenmore 592-4967*
-Kenmore 592-4966*
-Kenmore 592-4965*
-Kenmore 592-4964*
-Kenmore 592-4962*
-Kenmore 592-4961*
-Kenmore 592-4968*
-Samsung WA45K76**A*
-Samsung WA45K71**A*
-Samsung WF45K62**A*
-Samsung WF45K65**A*
-Samsung WF50K75**A*
-Maytag MHN33PDCX**
-GE GTW330A*K***
-GE GTW220A*K***
-Electrolux EFLS617****
-Electrolux EFLS517****
-Whirlpool WTW4616F**
-Whirlpool WTW4816F**
-Electrolux EFLW417****
-Maytag MVWB955F**
-LG WM1388H*
-LG WM8100H*A
-Kenmore 4148#
-Kenmore 4138#
-Amana NTW4516F**
-Roper RTW4516F**
-Inglis ITW4871F**
-Kenmore 2235*51*
-Maytag MVWC565F**
-Kenmore 4107#
-LG WM9500H*A
-Kenmore 4196#
-Kenmore 4116#
-Kenmore 4158#
-Insignia NS-TWM09WH7-C
-Insignia NS-TWM16WH7-C
-Whirlpool WFW85HEF**
-Whirlpool WFW8540F**
-Haier HLPW028BXW
-Haier HLPW024BXW
-LG WT5275C*
-LG WT1150C*
-GE GFW400S*K***
-GE GFW450S*K***
-Kenmore 3155#
-LG WM3075C*
-LG WM4370H*A
-Kenmore 4168#
-Kenmore 4130#
-Haier HLTW400BXW
-Whirlpool WFW3090G**
-Primus PFNJCASP114+
-Primus PFNJCASG114+
-Huebsch HWNS*2PP113+
-Huebsch HWNS*2SP113+
-Huebsch HWNM*2PP113+
-Huebsch HWNM*2SP113+
-Huebsch HWNB*2PP113+
-Huebsch HWNB*2SP113+
-IPSO BWNS*2PP113+
-IPSO BWNM*2PP113+
-IPSO BWNB*2PP113+
-Primus PWNB*2PP113+
-Unimac UWNM*2SP113+
-Econ-O-Wash KWNS*2PP113+
-Econ-O-Wash KWNM*2PP113+
-Huebsch HFND*ASP113+
-Huebsch HFND*AJP113+
-Huebsch HFND*ASG113+
-Huebsch HWNB*2PP112+
-Huebsch HWNM*2PP112+
-Huebsch HWNS*2PP112+
-GE GTW220BMK***
-Hotpoint HTW220BMK***
-Moffat MTW200BMK***
-GE GTW330BMK***
-GE GTW460BMK***
-GE GTW465BMK***
-GE GTW485BMK***
-GE GTW680BMK***
-LG WM3270C*
-LG WM3275C*
-Maytag MVWC416F**
-Kenmore 2224*51*
-Maytag MVWB765F**
-Maytag MVWB766F**
-Kenmore 2253*51*
-Speed Queen AWN432SP113**04
-Speed Queen AWNE82SP113+
-Speed Queen AFNE9BSP113+
-Speed Queen LWN432SP113**04
-Speed Queen LWNE52SP113+
-Speed Queen LFNE5BJP113+
-Speed Queen LFNE5BSP113+
-Speed Queen LFNE5RSP113+
-Speed Queen SWNN*2SP113+
-Speed Queen SWNM*2SP113+
-Speed Queen SWNS*2SP113+
-Speed Queen SWNN*2HP113**15
-Speed Queen SWNN*2HP113**04
-Speed Queen SFNN*ASP113+
-Speed Queen SFNN*AJP113+
-Speed Queen SFNN*RSP113+
-Speed Queen SFNS*RSP113+
-Speed Queen SWNS*2SP112+
-Speed Queen SWNM*2SP112+
-LG GCWF1069**#
-Whirlpool WGLTV27F**
-Danby DWM045WDB
-Avanti TLW16D0W
-Avanti TLW21D2P
-Whirlpool WFW5090G**
-Crosley CFWH4084G**
-LG WT7200C*
-LG WM5005H*A
-LG WM3085C*
-LG WT1901C*
-Crosley CAW42114G**
-Crosley CAW35114G**
-Conservator VAW3584G**
-Kenmore 4198#
-Blomberg WM77120NBL01
-Electrolux EFLW317****
-LG LUWD1C*
-Frigidaire FFTW4120***
-Kenmore 2023*71*
-	&Found brand but could not find model
-	&Found brand but could not find model
-
-Could not find brand
-
-Could not find brand
+system.indexes
+air-conditioning
+ô16:37:10.820 [Test worker] DEBUG org.mongodb.driver.protocol.command - Sending command {find : BsonString{value='ovens'}} to database enefficient on connection [connectionId{localValue:2, serverValue:200517}] to server ds163918.mlab.com:63918
+d16:37:11.033 [Test worker] DEBUG org.mongodb.driver.protocol.command - Command execution completed
+ÿ16:37:11.157 [Test worker] DEBUG org.mongodb.driver.protocol.command - Sending command {find : BsonString{value='air-conditioning'}} to database enefficient on connection [connectionId{localValue:2, serverValue:200517}] to server ds163918.mlab.com:63918
+d16:37:11.499 [Test worker] DEBUG org.mongodb.driver.protocol.command - Command execution completed
+÷16:37:11.617 [Test worker] DEBUG org.mongodb.driver.protocol.command - Sending command {find : BsonString{value='cooktops'}} to database enefficient on connection [connectionId{localValue:2, serverValue:200517}] to server ds163918.mlab.com:63918
+d16:37:11.646 [Test worker] DEBUG org.mongodb.driver.protocol.command - Command execution completed
+ú16:37:11.653 [Test worker] DEBUG org.mongodb.driver.protocol.command - Sending command {find : BsonString{value='dishwashers'}} to database enefficient on connection [connectionId{localValue:2, serverValue:200517}] to server ds163918.mlab.com:63918
+d16:37:11.713 [Test worker] DEBUG org.mongodb.driver.protocol.command - Command execution completed
+õ16:37:11.743 [Test worker] DEBUG org.mongodb.driver.protocol.command - Sending command {find : BsonString{value='dryers'}} to database enefficient on connection [connectionId{localValue:2, serverValue:200517}] to server ds163918.mlab.com:63918
+d16:37:11.782 [Test worker] DEBUG org.mongodb.driver.protocol.command - Command execution completed
+÷16:37:11.785 [Test worker] DEBUG org.mongodb.driver.protocol.command - Sending command {find : BsonString{value='freezers'}} to database enefficient on connection [connectionId{localValue:2, serverValue:200517}] to server ds163918.mlab.com:63918
+d16:37:11.842 [Test worker] DEBUG org.mongodb.driver.protocol.command - Command execution completed
+õ16:37:11.853 [Test worker] DEBUG org.mongodb.driver.protocol.command - Sending command {find : BsonString{value='ranges'}} to database enefficient on connection [connectionId{localValue:2, serverValue:200517}] to server ds163918.mlab.com:63918
+d16:37:11.927 [Test worker] DEBUG org.mongodb.driver.protocol.command - Command execution completed
+ü16:37:11.965 [Test worker] DEBUG org.mongodb.driver.protocol.command - Sending command {find : BsonString{value='washer-dryers'}} to database enefficient on connection [connectionId{localValue:2, serverValue:200517}] to server ds163918.mlab.com:63918
+d16:37:12.006 [Test worker] DEBUG org.mongodb.driver.protocol.command - Command execution completed
+ö16:37:12.009 [Test worker] DEBUG org.mongodb.driver.protocol.command - Sending command {find : BsonString{value='washers'}} to database enefficient on connection [connectionId{localValue:2, serverValue:200517}] to server ds163918.mlab.com:63918
+d16:37:12.081 [Test worker] DEBUG org.mongodb.driver.protocol.command - Command execution completed
+‰16:37:12.091 [Test worker] DEBUG org.mongodb.driver.protocol.command - Sending command {find : BsonString{value='refrigerators-wine-chiller'}} to database enefficient on connection [connectionId{localValue:2, serverValue:200517}] to server ds163918.mlab.com:63918
+d16:37:12.382 [Test worker] DEBUG org.mongodb.driver.protocol.command - Command execution completed
+%Data import and parsing successful!
+HI
+Staber HXW2304
+Staber HXW2404
+Staber HXW2504
+GE WCVH4800****
+LG WM8000H**
+GE GFWS1500D***
+LG WM4070H**
+LG WT1101C*
+LG WT1201C*
+Ariston ARWXF129W#
+Ariston ARWL129#
+Ariston ARWL129S#
+Kenmore 592-2921*
+Kenmore 592-2922*
+Whirlpool CAE2743B#**
+Whirlpool CAE2763B#**
+Whirlpool CAE2793B#**
+Kenmore 2712*31+
+Huebsch HWNBD2SP112****
+Huebsch HWNBX2SP112****
+Huebsch HWNBY2SP112****
+Huebsch HWNMN2SP112****
+Huebsch HWNSX1SP112****
+Huebsch HWNSX2SP112****
+IPSO BWNMN2PP112****
+IPSO BWNSX2PP112****
+Unimac UWNMN2SP112****
+LG WM3650H**
+Maytag MVW18MNA#**
+Maytag MVW18CSA#**
+Whirlpool CAE2733B#**
+Speed Queen QCAE2733B#**
+Moffat MTAP1100F
+Maytag MVW18PDA#**
+Maytag MVW18PDAX#*
+Maytag MVW18PRA#**
+LG WT5680H*A
+LG WM3250H*A
+LG WM3050C*
+Danby DWM17WDB
+LG WT1701C*
+LG WM8500H**
+Huebsch HWNBE2SP112****
+LG GCWP1069***
+LG TCW2013***
+Samsung WA45H72**A*
+Samsung WA45H70**A*
+Samsung WF42H55**A*
+Samsung WF42H52**A*
+Samsung WF42H51**A*
+Samsung WF42H50**A*
+Samsung WF42H57**A*
+Samsung WF42H56**A*
+Samsung WF45H61**A*
+Samsung WF45H63**A*
+Samsung WA56H90**A*
+Maytag MLE20PDAY*+
+Maytag MLG20PDAW*+
+Maytag MLE20PDAZ*+
+LG WM3570H*A
+Kenmore 592-4942*
+Kenmore 592-4941*
+Kenmore 592-4945*
+Kenmore 592-4944*
+Samsung WF56H91**A*
+LG WM1377H*
+Whirlpool WFW72HED*+
+LG WT5270C*
+Maytag MXS20PNA*+
+Maytag MXS20PDA*+
+Maytag MXS25PDA*+
+Maytag MXS30PDA*+
+Maytag MHN30PDCW*+
+Maytag MHN30PDCX*+
+Maytag MHN30PRCW*+
+Maytag MLE20PDCW*+
+Maytag MLE20PDCZ*+
+Maytag MLE20PRCY*+
+Maytag MLE20PRCZ*+
+Maytag MLG20PDCW*+
+Maytag MLG20PRCW*+
+Kenmore 592-2933*
+Whirlpool CHW8990C*+
+Whirlpool CET8000C*+
+Whirlpool CGT8000C*+
+Kenmore 592-4946*
+Kenmore 592-4947*
+Kenmore 592-4948*
+Kenmore 592-4949*
+Maytag MVW18CSBW*+
+Maytag MVW18MNBW*+
+Maytag MVW18PDBW*+
+Maytag MVW18PDBX*+
+Whirlpool CAE2763C*+
+LG WT1801H*A
+LG WT5480C*
+LG WM4270H*A
+Kenmore 3146####
+Kenmore 3142####
+LG WM3370H*A
+LG WM3170C*
+Whirlpool WTW5000D*+
+Maytag MVWC555D*+
+Maytag MVWX655D*+
+Kenmore 2513*41+
+LG WT7700H*A
+Bosch WAP24200UC
+Bosch WAP24201UC
+Bosch WAP24202UC
+Maytag MVW18PDAX*+
+Speed Queen QCAE2733B*+
+Whirlpool WTW8500D*+
+Whirlpool WTW8000D*+
+GE WSLP1500H***
+GE WSLS1500H***
+Whirlpool CHW9060A*+
+Whirlpool CHW9050A*+
+Huebsch ZWNE82SP113+
+Huebsch YWNE52PP113+
+Huebsch ZFNE9BSP113+
+Huebsch YFNE5BJP113+
+Huebsch YFNE5RSP113+
+Unimac UFNE5BJP113+
+IPSO BFNE6BJP113+
+Huebsch HWNN*2SP113+
+Huebsch HFNB*ASG113+
+Huebsch HFNB*ASP113+
+Huebsch HFNB*RSP113+
+Huebsch HFNN*ASP113+
+Huebsch HFNN*RSP113+
+Huebsch HFNS*RSP113+
+IPSO BFNB*ASP113+
+LG WT901C*
+Kenmore 2234*51+
+Kenmore 2244*51+
+Kenmore 2022*51+
+Kenmore 514*51+
+Kenmore 2233*51+
+Kenmore 2024*51+
+Amana NTW4755E*+
+Whirlpool WTW7000D*+
+Whirlpool WTW7300D*+
+Avanti TLW30W
+Avanti TLW09W
+Frigidaire FFLG4033***
+Frigidaire FFLG3911***
+Kenmore 2813*41+
+Kenmore 2913*41+
+Kenmore 2613*41+
+Kenmore 2713*41+
+LG WM3475H*A
+LG WM3175C*
+GE GTW180S*J***
+Samsung WA40J300*A*
+Fisher & Paykel WL4027P*
+Fisher & Paykel WL4027J*
+Whirlpool YWET4024E*+
+Kenmore C268143*51+
+Whirlpool YWET4027E*+
+Whirlpool WGT4027E*+
+Amana NFW5800D*+
+Maytag MVWB755D*+
+Maytag MVWB835D*+
+Maytag MVWB855D*+
+Maytag MVWP475E*+
+Electrolux EIFLS20****
+GE WCVH4800****
+GE GFWN1100H***
+GE GFWH1200H***
+GE GFWS1700H***
+GE GFWS1705H***
+Whirlpool WFC7500V*+
+Maytag MHWC7500Y*+
+Frigidaire FFFS5115***
+Frigidaire FFFW5100***
+Crosley CFW7400***
+Frigidaire FFFW5000***
+Kenmore 970L4845****
+Kenmore 970L4842****
+Electrolux EIFLS60****
+Frigidaire FFLG2022***
+Frigidaire FAHE1011***
+Fisher & Paykel WA3927G*
+Ariston ARWXF129WNA.1
+Ariston ARWL129NA.1
+Ariston ARWL129SNA.1
+Frigidaire FFTW1001***
+Whirlpool WTW4850B**
+Maytag 2210*31*
+Whirlpool WTW8700E**
+LG WT1301C*
+Bosch WAT28400UC
+Bosch WAT28401UC
+Bosch WAT28402UC
+Haier HLP24E
+Haier HLP21N
+Haier HLTW500AXW
+Electrolux EIFLS55****
+Electrolux EIFLW50****
+Frigidaire FAHE4045***
+Inglis ITW4671E**
+Inglis ITW4771E**
+Inglis ITW4971E**
+GE GTW860S*J***
+GE GTW810S*J***
+Blomberg WM98400SX
+Blomberg WM98200SX
+Beko WMY10148C0
+Beko WMY10148W0
+Blomberg WM77120
+Beko WTE7604XLW0
+GE GFWN1600J***
+Haier HLPW028AXW
+GE GFWN1300J***
+Samsung WF36J40**A*
+LG WT1501C*
+LG WD100C*
+LG WD200C*
+LG WM9000H*A
+LG WT7710H*A
+GE GTW680BSJ***
+GE GTW485ASJ***
+GE GTW460ASJ***
+LG WM5000H*A
+GE GTW490ACJ***
+Haier HLTW600AXW
+Maytag MVWC415E*+
+Amana NTW4605E*+
+Amana NTW4615E*+
+Amana NTW4655E*+
+Amana NTW4705E*+
+Whirlpool WTW4815E*+
+Whirlpool WTW4915E*+
+Frigidaire CFW4900***
+GE GTW460AMJ***
+Crosley CFWH7300***
+Miele W1753
+Miele W3048
+Miele PW6068
+Maytag MHN33PDCW**
+Maytag MHN33PRCW**
+Midea US-FC70-DS12DSH/C0401E
+Maytag MVWB865F**
+Whirlpool WFW9290F**
+Whirlpool WFW7590F**
+Electrolux EWFLS70****
+Primus PFNE3BJP113+
+Primus PFNE3RSP113+
+Huebsch ZWN432SP113**04
+Huebsch YWN432SP113**04
+EuroDesign DWN432SP113**04
+Primus PWNE32PP113+
+IPSO BFNB*ASG113+
+Huebsch HFNK*ASG113+
+Huebsch HFNK*ASP113+
+Huebsch HFNN*BSP113+
+Primus PFNJXASG114+
+Primus PFNJXASP114+
+Primus PWNB*2PP112+
+Whirlpool WFW75HEF**
+Whirlpool WFW7540F**
+Samsung WA52J870*A*
+GE WW22K680*A*
+Samsung WA50K86**A*
+Fisher & Paykel WL4027G*
+Maytag MHW5500F**
+Maytag MHW8200F**
+Maytag MHW3505F**
+Whirlpool WFW90HEF**
+Whirlpool WFW92HEF**
+Maytag MHW3500F**
+LG WD205C*
+Huebsch HWNN*2AP113**04
+Huebsch HWNN*2AP113**17
+Huebsch HWNN*2HP113**04
+Kenmore 3163*61*
+LG WT7600H*A
+LG WT7500C*
+LG WM3575C*
+Kenmore 3142#
+Kenmore 3146#
+Kenmore 5197#
+Kenmore 5199#
+LG WM3770H*A
+LG WM3670H*A
+Kenmore 4139#
+Kenmore 4126#
+Kenmore 592-4967*
+Kenmore 592-4966*
+Kenmore 592-4965*
+Kenmore 592-4964*
+Kenmore 592-4962*
+Kenmore 592-4961*
+Kenmore 592-4968*
+Samsung WA45K76**A*
+Samsung WA45K71**A*
+Samsung WF45K62**A*
+Samsung WF45K65**A*
+Samsung WF50K75**A*
+Maytag MHN33PDCX**
+GE GTW330A*K***
+GE GTW220A*K***
+Electrolux EFLS617****
+Electrolux EFLS517****
+Whirlpool WTW4616F**
+Whirlpool WTW4816F**
+Electrolux EFLW417****
+Maytag MVWB955F**
+LG WM1388H*
+LG WM8100H*A
+Kenmore 4148#
+Kenmore 4138#
+Amana NTW4516F**
+Roper RTW4516F**
+Inglis ITW4871F**
+Kenmore 2235*51*
+Maytag MVWC565F**
+Kenmore 4107#
+LG WM9500H*A
+Kenmore 4196#
+Kenmore 4116#
+Kenmore 4158#
+Insignia NS-TWM09WH7-C
+Insignia NS-TWM16WH7-C
+Whirlpool WFW85HEF**
+Whirlpool WFW8540F**
+Haier HLPW028BXW
+Haier HLPW024BXW
+LG WT5275C*
+LG WT1150C*
+GE GFW400S*K***
+GE GFW450S*K***
+Kenmore 3155#
+LG WM3075C*
+LG WM4370H*A
+Kenmore 4168#
+Kenmore 4130#
+Haier HLTW400BXW
+Whirlpool WFW3090G**
+Primus PFNJCASP114+
+Primus PFNJCASG114+
+Huebsch HWNS*2PP113+
+Huebsch HWNS*2SP113+
+Huebsch HWNM*2PP113+
+Huebsch HWNM*2SP113+
+Huebsch HWNB*2PP113+
+Huebsch HWNB*2SP113+
+IPSO BWNS*2PP113+
+IPSO BWNM*2PP113+
+IPSO BWNB*2PP113+
+Primus PWNB*2PP113+
+Unimac UWNM*2SP113+
+Econ-O-Wash KWNS*2PP113+
+Econ-O-Wash KWNM*2PP113+
+Huebsch HFND*ASP113+
+Huebsch HFND*AJP113+
+Huebsch HFND*ASG113+
+Huebsch HWNB*2PP112+
+Huebsch HWNM*2PP112+
+Huebsch HWNS*2PP112+
+GE GTW220BMK***
+Hotpoint HTW220BMK***
+Moffat MTW200BMK***
+GE GTW330BMK***
+GE GTW460BMK***
+GE GTW465BMK***
+GE GTW485BMK***
+GE GTW680BMK***
+LG WM3270C*
+LG WM3275C*
+Maytag MVWC416F**
+Kenmore 2224*51*
+Maytag MVWB765F**
+Maytag MVWB766F**
+Kenmore 2253*51*
+Speed Queen AWN432SP113**04
+Speed Queen AWNE82SP113+
+Speed Queen AFNE9BSP113+
+Speed Queen LWN432SP113**04
+Speed Queen LWNE52SP113+
+Speed Queen LFNE5BJP113+
+Speed Queen LFNE5BSP113+
+Speed Queen LFNE5RSP113+
+Speed Queen SWNN*2SP113+
+Speed Queen SWNM*2SP113+
+Speed Queen SWNS*2SP113+
+Speed Queen SWNN*2HP113**15
+Speed Queen SWNN*2HP113**04
+Speed Queen SFNN*ASP113+
+Speed Queen SFNN*AJP113+
+Speed Queen SFNN*RSP113+
+Speed Queen SFNS*RSP113+
+Speed Queen SWNS*2SP112+
+Speed Queen SWNM*2SP112+
+LG GCWF1069**#
+Whirlpool WGLTV27F**
+Danby DWM045WDB
+Avanti TLW16D0W
+Avanti TLW21D2P
+Whirlpool WFW5090G**
+Crosley CFWH4084G**
+LG WT7200C*
+LG WM5005H*A
+LG WM3085C*
+LG WT1901C*
+Crosley CAW42114G**
+Crosley CAW35114G**
+Conservator VAW3584G**
+Kenmore 4198#
+Blomberg WM77120NBL01
+Electrolux EFLW317****
+LG LUWD1C*
+Frigidaire FFTW4120***
+Kenmore 2023*71*
+	
+&Found brand but could not find model
+	
+&Found brand but could not find model
+	Could not find brand
+	Could not find brand
