@@ -31,48 +31,74 @@ public class ControllerTest {
 		
 		switch(type) {
 			case "AirConditioner":
-				AirConditionerADT found1 = (AirConditionerADT) FindAppliance.find(app, brand, model);
-				return new ApplianceReturn(found1.getBRAND_NAME(), found1.getMMODEL_NUM_1(), type, found1.getConsumption());
+				app = new AirConditionerADT[Dataset.getAirconditioners().size()];
+				Dataset.getAirconditioners().toArray(app);
+				MergeSort.sort(app);
+				ApplianceADT found1 = FindAppliance.find(app, brand, model);
+				return new ApplianceReturn(found1.getBRAND_NAME(), found1.getMMODEL_NUM_1() , type, ((AirConditionerADT)found1).getConsumption());
 		
 			case "Dryer":
 				app = new ClothesDryerADT[Dataset.getDryers().size()];
 				Dataset.getDryers().toArray(app);
 				MergeSort.sort(app);
 				ApplianceADT found2 = FindAppliance.find(app, brand, model);
-				System.out.println(model);
-				return new ApplianceReturn(found2.getBRAND_NAME(), found2.getMMODEL_NUM_1() , type, ((ClothesDryerADT)found2).getConsumption());//(found2.getBRAND_NAME(), found2.getMMODEL_NUM_1(), type, found2.getConsumption());
+				return new ApplianceReturn(found2.getBRAND_NAME(), found2.getMMODEL_NUM_1() , type, ((ClothesDryerADT)found2).getConsumption());
 				
 			case "Cooktop":
-				CooktopADT found3 = (CooktopADT) FindAppliance.find(app, brand, model);
-				return new ApplianceReturn(found3.getBRAND_NAME(), found3.getMMODEL_NUM_1(), type, found3.getConsumption());
+				app = new CooktopADT[Dataset.getCooktops().size()];
+				Dataset.getCooktops().toArray(app);
+				MergeSort.sort(app);
+				ApplianceADT found3 = FindAppliance.find(app, brand, model);
+				return new ApplianceReturn(found3.getBRAND_NAME(), found3.getMMODEL_NUM_1() , type, ((CooktopADT)found3).getConsumption());
 				
 			case "Dishwasher":
-				DishwasherADT found4 = (DishwasherADT) FindAppliance.find(app, brand, model);
-				return new ApplianceReturn(found4.getBRAND_NAME(), found4.getMMODEL_NUM_1(), type, found4.getConsumption());
+				app = new DishwasherADT[Dataset.getDishwashers().size()];
+				Dataset.getDishwashers().toArray(app);
+				MergeSort.sort(app);
+				ApplianceADT found4 = FindAppliance.find(app, brand, model);
+				return new ApplianceReturn(found4.getBRAND_NAME(), found4.getMMODEL_NUM_1() , type, ((DishwasherADT)found4).getConsumption());
 			
 			case "Freezer":
-				FreezerADT found5 = (FreezerADT) FindAppliance.find(app, brand, model);
-				return new ApplianceReturn(found5.getBRAND_NAME(), found5.getMMODEL_NUM_1(), type, found5.getConsumption());
+				app = new FreezerADT[Dataset.getFreezers().size()];
+				Dataset.getFreezers().toArray(app);
+				MergeSort.sort(app);
+				ApplianceADT found5 = FindAppliance.find(app, brand, model);
+				return new ApplianceReturn(found5.getBRAND_NAME(), found5.getMMODEL_NUM_1() , type, ((FreezerADT)found5).getConsumption());
 			
 			case "Oven":
-				OvenADT found6 = (OvenADT) FindAppliance.find(app, brand, model);
-				return new ApplianceReturn(found6.getBRAND_NAME(), found6.getMMODEL_NUM_1(), type, found6.getConsumption());
+				app = new OvenADT[Dataset.getOvens().size()];
+				Dataset.getOvens().toArray(app);
+				MergeSort.sort(app);
+				ApplianceADT found6 = FindAppliance.find(app, brand, model);
+				return new ApplianceReturn(found6.getBRAND_NAME(), found6.getMMODEL_NUM_1() , type, ((OvenADT)found6).getConsumption());
 			
 			case "Range":
-				RangeADT found7 = (RangeADT) FindAppliance.find(app, brand, model);
-				return new ApplianceReturn(found7.getBRAND_NAME(), found7.getMMODEL_NUM_1(), type, found7.getConsumption());
+				app = new RangeADT[Dataset.getRanges().size()];
+				Dataset.getRanges().toArray(app);
+				MergeSort.sort(app);
+				ApplianceADT found7 = FindAppliance.find(app, brand, model);
+				return new ApplianceReturn(found7.getBRAND_NAME(), found7.getMMODEL_NUM_1() , type, ((RangeADT)found7).getConsumption());
 			
 			case "Refridgerator":
-				RefridgeratorADT found8 = (RefridgeratorADT) FindAppliance.find(app, brand, model);
-				return new ApplianceReturn(found8.getBRAND_NAME(), found8.getMMODEL_NUM_1(), type, found8.getConsumption());
+				app = new RefridgeratorADT[Dataset.getRefridgerators().size()];
+				Dataset.getRefridgerators().toArray(app);
+				MergeSort.sort(app);
+				ApplianceADT found8 = FindAppliance.find(app, brand, model);
+				return new ApplianceReturn(found8.getBRAND_NAME(), found8.getMMODEL_NUM_1() , type, ((RefridgeratorADT)found8).getConsumption());
 			
 			case "Washer":
-				WasherADT found9 = (WasherADT) FindAppliance.find(app, brand, model);
-				return new ApplianceReturn(found9.getBRAND_NAME(), found9.getMMODEL_NUM_1(), type, found9.getConsumption());
+				app = new WasherADT[Dataset.getWashers().size()];
+				Dataset.getWashers().toArray(app);
+				MergeSort.sort(app);
+				ApplianceADT found9 = FindAppliance.find(app, brand, model);
+				return new ApplianceReturn(found9.getBRAND_NAME(), found9.getMMODEL_NUM_1() , type, ((WasherADT)found9).getConsumption());
 			
 			case "Washer-Dryer":
-				WasherDryerADT found10 = (WasherDryerADT) FindAppliance.find(app, brand, model);
-				return new ApplianceReturn(found10.getBRAND_NAME(), found10.getMMODEL_NUM_1(), type, found10.getConsumption());
+				app = new WasherDryerADT[Dataset.getWasherDryers().size()];
+				Dataset.getWasherDryers().toArray(app);
+				MergeSort.sort(app);
+				ApplianceADT found10 = FindAppliance.find(app, brand, model);
+				return new ApplianceReturn(found10.getBRAND_NAME(), found10.getMMODEL_NUM_1() , type, ((WasherDryerADT)found10).getConsumption());
 				
 			default:
 				return new ApplianceReturn(type, brand, model, "0");
