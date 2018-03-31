@@ -23,16 +23,16 @@ import com.mongodb.client.MongoDatabase;
  */
 public class Dataset {
 	// ArrayLists for appliances
-	private static final ArrayList<AirConditionerADT> AIRCONDITIONERS = new ArrayList<AirConditionerADT>();
-	private static final ArrayList<ClothesDryerADT> DRYERS = new ArrayList<ClothesDryerADT>();
-	private static final ArrayList<CooktopADT> COOKTOPS = new ArrayList<CooktopADT>();
-	private static final ArrayList<DishwasherADT> DISHWASHERS = new ArrayList<DishwasherADT>();
-	private static final ArrayList<FreezerADT> FREEZERS = new ArrayList<FreezerADT>();
-	private static final ArrayList<OvenADT> OVENS = new ArrayList<OvenADT>();
-	private static final ArrayList<RangeADT> RANGES = new ArrayList<RangeADT>();
-	private static final ArrayList<RefridgeratorADT> REFRIDGERATORS = new ArrayList<RefridgeratorADT>();
-	private static final ArrayList<WasherADT> WASHERS = new ArrayList<WasherADT>();
-	private static final ArrayList<WasherDryerADT> WASHER_DRYERS = new ArrayList<WasherDryerADT>();
+	public static final ArrayList<AirConditionerADT> AIRCONDITIONERS = new ArrayList<AirConditionerADT>();
+	public static final ArrayList<ClothesDryerADT> DRYERS = new ArrayList<ClothesDryerADT>();
+	public static final ArrayList<CooktopADT> COOKTOPS = new ArrayList<CooktopADT>();
+	public static final ArrayList<DishwasherADT> DISHWASHERS = new ArrayList<DishwasherADT>();
+	public static final ArrayList<FreezerADT> FREEZERS = new ArrayList<FreezerADT>();
+	public static final ArrayList<OvenADT> OVENS = new ArrayList<OvenADT>();
+	public static final ArrayList<RangeADT> RANGES = new ArrayList<RangeADT>();
+	public static final ArrayList<RefridgeratorADT> REFRIDGERATORS = new ArrayList<RefridgeratorADT>();
+	public static final ArrayList<WasherADT> WASHERS = new ArrayList<WasherADT>();
+	public static final ArrayList<WasherDryerADT> WASHER_DRYERS = new ArrayList<WasherDryerADT>();
 	
 	private static JsonParser parser;
 	private static Gson gson;
