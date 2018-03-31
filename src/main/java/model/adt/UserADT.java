@@ -6,7 +6,7 @@ public class UserADT {
 	
 	private String uid, location, houseType, email;
 	private double score;
-	private ArrayList<ApplianceADT> appliances;
+	private ArrayList<ArrayList<ApplianceADT>> appliances;
 	
 	public UserADT(String uid, String email) {
 		this.uid = uid;
@@ -50,11 +50,11 @@ public class UserADT {
 		this.score = score;
 	}
 
-	public ArrayList<ApplianceADT> getAppliances() {
+	public ArrayList<ArrayList<ApplianceADT>> getAppliances() {
 		return appliances;
 	}
 
-	public void setAppliances(ArrayList<ApplianceADT> appliances) {
+	public void setAppliances(ArrayList<ArrayList<ApplianceADT>> appliances) {
 		this.appliances = appliances;
 	}
 	
