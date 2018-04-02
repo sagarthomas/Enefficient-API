@@ -24,7 +24,7 @@ public class LibraryTest {
     	UserADT user = new UserADT("yoo", "yohelpme@help.com");
     	ArrayList<ApplianceADT> list = new ArrayList<ApplianceADT>();
     	list.add(new ApplianceADT("Woo", "LP6", "nice"));
-    	user.setAppliances(list);
+    	//user.setAppliances(list);
     	String json = gson.toJson(user);
     	System.out.println(json);
     	String lel = "woo";

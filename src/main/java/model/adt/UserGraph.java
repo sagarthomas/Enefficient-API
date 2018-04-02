@@ -18,7 +18,7 @@ public class UserGraph {
 		
 		for (int i = 0; i < V; i++) {
 			for (int j = 0; j < users.size(); j++) {
-				if (users.get(j).getHouseType() == "") {
+				if (users.get(j).getHouseType() == i) {
 					adj[i].add(users.get(j));
 				}
 			}

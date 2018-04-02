@@ -2,26 +2,29 @@ package model.adt;
 
 import java.util.ArrayList;
 
-import model.util.Bag;
+//import model.util.Bag;
 import model.util.Dataset;
 
 public class Recommend {
 	
-	private String currentUserId;
+	private String currentUserId, type, consumption;
 	private UserADT currentUser;
 	private UserGraph G;
 	private int userIndex, replaceID;
 	private ArrayList<ArrayList<ApplianceADT>> userApps;
 	private double fridgeAvg, washerAvg, dryerAvg, washdryAvg, freezerAvg, ovenAvg, cooktopAvg, dishwasherAvg, rangeAvg, ACAvg;
+	private ApplianceADT replace;
 	
-	public Recommend(UserGraph G, String currentUserId, ArrayList<ArrayList<ApplianceADT>> userApps, int recommendIndex) {
+	public Recommend(UserGraph G, String currentUserId) {
 		this.G = G;
 		this.currentUserId = currentUserId;
 		this.currentUser = findUser();
-		this.userApps = userApps;
+		this.userApps = currentUser.getAppliances();
 		
 		calcAverages();
 		this.replaceID = findReplacement();
+		replace = replace();
+		
 		
 	}
 	
@@ -187,6 +190,8 @@ public class Recommend {
 						if (Double.parseDouble(((RefridgeratorADT)apps.get(i)).getConsumption()) < fridgeAvg && fridgeAvg - Double.parseDouble(((RefridgeratorADT)apps.get(i)).getConsumption()) > diff) {
 							replace = apps.get(i);
 							diff = fridgeAvg - Double.parseDouble(((RefridgeratorADT)apps.get(i)).getConsumption());
+							type = "Refridgerator";
+							consumption = ((RefridgeratorADT)apps.get(i)).getConsumption();
 						}
 						break;
 						
@@ -194,6 +199,8 @@ public class Recommend {
 						if (Double.parseDouble(((WasherADT)apps.get(i)).getConsumption()) < washerAvg && washerAvg - Double.parseDouble(((WasherADT)apps.get(i)).getConsumption()) > diff) {
 							replace = apps.get(i);
 							diff = washerAvg - Double.parseDouble(((WasherADT)apps.get(i)).getConsumption());
+							type = "Washer";
+							consumption = ((WasherADT)apps.get(i)).getConsumption();
 						}
 						break;
 						
@@ -201,6 +208,8 @@ public class Recommend {
 						if (Double.parseDouble(((ClothesDryerADT)apps.get(i)).getConsumption()) < dryerAvg && dryerAvg - Double.parseDouble(((ClothesDryerADT)apps.get(i)).getConsumption()) > diff) {
 							replace = apps.get(i);
 							diff = dryerAvg - Double.parseDouble(((ClothesDryerADT)apps.get(i)).getConsumption());
+							type = "Dryer";
+							consumption = ((ClothesDryerADT)apps.get(i)).getConsumption();
 						}
 						break;
 						
@@ -208,6 +217,8 @@ public class Recommend {
 						if (Double.parseDouble(((WasherDryerADT)apps.get(i)).getConsumption()) < washdryAvg && washdryAvg - Double.parseDouble(((WasherDryerADT)apps.get(i)).getConsumption()) > diff) {
 							replace = apps.get(i);
 							diff = washdryAvg - Double.parseDouble(((WasherDryerADT)apps.get(i)).getConsumption());
+							type = "Washer-Dryer";
+							consumption = ((WasherDryerADT)apps.get(i)).getConsumption();
 						}
 						break;
 						
@@ -215,6 +226,8 @@ public class Recommend {
 						if (Double.parseDouble(((FreezerADT)apps.get(i)).getConsumption()) < freezerAvg && freezerAvg - Double.parseDouble(((FreezerADT)apps.get(i)).getConsumption()) > diff) {
 							replace = apps.get(i);
 							diff = freezerAvg - Double.parseDouble(((FreezerADT)apps.get(i)).getConsumption());
+							type = "Freezer";
+							consumption = ((FreezerADT)apps.get(i)).getConsumption();
 						}
 						break;
 						
@@ -222,6 +235,8 @@ public class Recommend {
 						if (Double.parseDouble(((OvenADT)apps.get(i)).getConsumption()) < ovenAvg && ovenAvg - Double.parseDouble(((OvenADT)apps.get(i)).getConsumption()) > diff) {
 							replace = apps.get(i);
 							diff = ovenAvg - Double.parseDouble(((OvenADT)apps.get(i)).getConsumption());
+							type = "Oven";
+							consumption = ((OvenADT)apps.get(i)).getConsumption();
 						}
 						break;
 						
@@ -229,6 +244,8 @@ public class Recommend {
 						if (Double.parseDouble(((CooktopADT)apps.get(i)).getConsumption()) < cooktopAvg && cooktopAvg - Double.parseDouble(((CooktopADT)apps.get(i)).getConsumption()) > diff) {
 							replace = apps.get(i);
 							diff = cooktopAvg - Double.parseDouble(((CooktopADT)apps.get(i)).getConsumption());
+							type = "Cooktop";
+							consumption = ((CooktopADT)apps.get(i)).getConsumption();
 						}
 						break;
 						
@@ -236,6 +253,8 @@ public class Recommend {
 						if (Double.parseDouble(((DishwasherADT)apps.get(i)).getConsumption()) < dishwasherAvg && dishwasherAvg - Double.parseDouble(((DishwasherADT)apps.get(i)).getConsumption()) > diff) {
 							replace = apps.get(i);
 							diff = dishwasherAvg - Double.parseDouble(((DishwasherADT)apps.get(i)).getConsumption());
+							type = "DIshwasher";
+							consumption = ((DishwasherADT)apps.get(i)).getConsumption();
 						}
 						break;
 						
@@ -243,6 +262,8 @@ public class Recommend {
 						if (Double.parseDouble(((RangeADT)apps.get(i)).getConsumption()) < rangeAvg && rangeAvg - Double.parseDouble(((RangeADT)apps.get(i)).getConsumption()) > diff) {
 							replace = apps.get(i);
 							diff = rangeAvg - Double.parseDouble(((RangeADT)apps.get(i)).getConsumption());
+							type = "Range";
+							consumption = ((RangeADT)apps.get(i)).getConsumption();
 						}
 						break;
 						
@@ -250,6 +271,8 @@ public class Recommend {
 						if (Double.parseDouble(((AirConditionerADT)apps.get(i)).getConsumption()) < ACAvg && ACAvg - Double.parseDouble(((AirConditionerADT)apps.get(i)).getConsumption()) > diff) {
 							replace = apps.get(i);
 							diff = ACAvg - Double.parseDouble(((AirConditionerADT)apps.get(i)).getConsumption());
+							type = "Air Conditioner";
+							consumption = ((AirConditionerADT)apps.get(i)).getConsumption();
 						}
 						break;
 					}
@@ -258,6 +281,14 @@ public class Recommend {
 		}
 		
 		return replace;
+	}
+	
+	public String getConsumption() {
+		return consumption;
+	}
+	
+	public String getType() {
+		return type;
 	}
 
 }

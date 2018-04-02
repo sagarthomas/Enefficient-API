@@ -4,8 +4,9 @@ import java.util.ArrayList;
 
 public class UserADT {
 	
-	private String uid, location, houseType, email;
+	private String uid, location, email;
 	private double score;
+	private int houseType;
 	private ArrayList<ArrayList<ApplianceADT>> appliances;
 	
 	public UserADT(String uid, String email) {
@@ -26,11 +27,11 @@ public class UserADT {
 		this.location = location;
 	}
 
-	public String getHouseType() {
+	public int getHouseType() {
 		return houseType;
 	}
 
-	public void setHouseType(String houseType) {
+	public void setHouseType(int houseType) {
 		this.houseType = houseType;
 	}
 

@@ -1,17 +1,17 @@
-„{"uid":"yoo","email":"yohelpme@help.com","score":0.0,"appliances":[{"BRAND_NAME":"Woo","MODEL_NUM_1":"LP6","REC_REF_KEY":"nice"}]}
+E{"uid":"yoo","email":"yohelpme@help.com","score":0.0,"houseType":0}
 117911
-á16:37:09.682 [Test worker] INFO org.mongodb.driver.cluster - Cluster created with settings {hosts=[ds163918.mlab.com:63918], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
-»16:37:09.750 [Test worker] DEBUG org.mongodb.driver.cluster - Updating cluster description to  {type=UNKNOWN, servers=[{address=ds163918.mlab.com:63918, type=UNKNOWN, state=CONNECTING}]
-Œ16:37:09.769 [Test worker] INFO org.mongodb.driver.cluster - Cluster description not yet available. Waiting for 30000 ms before timing out
-ó16:37:10.393 [cluster-ClusterId{value='5abaab75286c3f3b345593be', description='null'}-ds163918.mlab.com:63918] INFO org.mongodb.driver.connection - Opened connection [connectionId{localValue:1, serverValue:200516}] to ds163918.mlab.com:63918
-¾16:37:10.394 [cluster-ClusterId{value='5abaab75286c3f3b345593be', description='null'}-ds163918.mlab.com:63918] DEBUG org.mongodb.driver.cluster - Checking status of ds163918.mlab.com:63918
-¢16:37:10.433 [cluster-ClusterId{value='5abaab75286c3f3b345593be', description='null'}-ds163918.mlab.com:63918] INFO org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=ds163918.mlab.com:63918, type=REPLICA_SET_PRIMARY, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 13]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=null, roundTripTimeNanos=31861283, setName='rs-ds163918', canonicalAddress=ds163918-a.mlab.com:63918, hosts=[ds163918-a.mlab.com:63918], passives=[], arbiters=[], primary='ds163918-a.mlab.com:63918', tagSet=TagSet{[]}, electionId=7fffffff0000000000000001, setVersion=1, lastWriteDate=Tue Mar 27 16:37:06 EDT 2018, lastUpdateTimeNanos=89944274284998}
-µ16:37:10.435 [cluster-ClusterId{value='5abaab75286c3f3b345593be', description='null'}-ds163918.mlab.com:63918] DEBUG org.mongodb.driver.cluster - Updating cluster description to  {type=REPLICA_SET, servers=[{address=ds163918.mlab.com:63918, type=REPLICA_SET_PRIMARY, roundTripTime=31.9 ms, state=CONNECTED}]
-Ÿ16:37:10.705 [Test worker] INFO org.mongodb.driver.connection - Opened connection [connectionId{localValue:2, serverValue:200517}] to ds163918.mlab.com:63918
-ø16:37:10.715 [Test worker] DEBUG org.mongodb.driver.protocol.command - Sending command {listCollections : BsonInt32{value=1}} to database enefficient on connection [connectionId{localValue:2, serverValue:200517}] to server ds163918.mlab.com:63918
-d16:37:10.747 [Test worker] DEBUG org.mongodb.driver.protocol.command - Command execution completed
-ù16:37:10.752 [Test worker] DEBUG org.mongodb.driver.protocol.command - Sending command {getMore : BsonInt64{value=7463054842}} to database enefficient on connection [connectionId{localValue:2, serverValue:200517}] to server ds163918.mlab.com:63918
-d16:37:10.781 [Test worker] DEBUG org.mongodb.driver.protocol.command - Command execution completed
+á14:23:49.121 [Test worker] INFO org.mongodb.driver.cluster - Cluster created with settings {hosts=[ds163918.mlab.com:63918], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+»14:23:49.211 [Test worker] DEBUG org.mongodb.driver.cluster - Updating cluster description to  {type=UNKNOWN, servers=[{address=ds163918.mlab.com:63918, type=UNKNOWN, state=CONNECTING}]
+Œ14:23:49.244 [Test worker] INFO org.mongodb.driver.cluster - Cluster description not yet available. Waiting for 30000 ms before timing out
+ó14:23:49.864 [cluster-ClusterId{value='5ac275351d621b376483a99a', description='null'}-ds163918.mlab.com:63918] INFO org.mongodb.driver.connection - Opened connection [connectionId{localValue:1, serverValue:269246}] to ds163918.mlab.com:63918
+¾14:23:49.864 [cluster-ClusterId{value='5ac275351d621b376483a99a', description='null'}-ds163918.mlab.com:63918] DEBUG org.mongodb.driver.cluster - Checking status of ds163918.mlab.com:63918
+£14:23:49.900 [cluster-ClusterId{value='5ac275351d621b376483a99a', description='null'}-ds163918.mlab.com:63918] INFO org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=ds163918.mlab.com:63918, type=REPLICA_SET_PRIMARY, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 13]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=null, roundTripTimeNanos=29187567, setName='rs-ds163918', canonicalAddress=ds163918-a.mlab.com:63918, hosts=[ds163918-a.mlab.com:63918], passives=[], arbiters=[], primary='ds163918-a.mlab.com:63918', tagSet=TagSet{[]}, electionId=7fffffff0000000000000001, setVersion=1, lastWriteDate=Mon Apr 02 14:23:48 EDT 2018, lastUpdateTimeNanos=214985522201885}
+µ14:23:49.905 [cluster-ClusterId{value='5ac275351d621b376483a99a', description='null'}-ds163918.mlab.com:63918] DEBUG org.mongodb.driver.cluster - Updating cluster description to  {type=REPLICA_SET, servers=[{address=ds163918.mlab.com:63918, type=REPLICA_SET_PRIMARY, roundTripTime=29.2 ms, state=CONNECTED}]
+Ÿ14:23:50.169 [Test worker] INFO org.mongodb.driver.connection - Opened connection [connectionId{localValue:2, serverValue:269247}] to ds163918.mlab.com:63918
+ø14:23:50.180 [Test worker] DEBUG org.mongodb.driver.protocol.command - Sending command {listCollections : BsonInt32{value=1}} to database enefficient on connection [connectionId{localValue:2, serverValue:269247}] to server ds163918.mlab.com:63918
+d14:23:50.221 [Test worker] DEBUG org.mongodb.driver.protocol.command - Command execution completed
+ù14:23:50.230 [Test worker] DEBUG org.mongodb.driver.protocol.command - Sending command {getMore : BsonInt64{value=5811905017}} to database enefficient on connection [connectionId{localValue:2, serverValue:269247}] to server ds163918.mlab.com:63918
+d14:23:50.259 [Test worker] DEBUG org.mongodb.driver.protocol.command - Command execution completed
 refrigerators-wine-chiller
 dishwashers
 
@@ -25,26 +25,26 @@ freezers
 cooktops
 system.indexes
 air-conditioning
-ô16:37:10.820 [Test worker] DEBUG org.mongodb.driver.protocol.command - Sending command {find : BsonString{value='ovens'}} to database enefficient on connection [connectionId{localValue:2, serverValue:200517}] to server ds163918.mlab.com:63918
-d16:37:11.033 [Test worker] DEBUG org.mongodb.driver.protocol.command - Command execution completed
-ÿ16:37:11.157 [Test worker] DEBUG org.mongodb.driver.protocol.command - Sending command {find : BsonString{value='air-conditioning'}} to database enefficient on connection [connectionId{localValue:2, serverValue:200517}] to server ds163918.mlab.com:63918
-d16:37:11.499 [Test worker] DEBUG org.mongodb.driver.protocol.command - Command execution completed
-÷16:37:11.617 [Test worker] DEBUG org.mongodb.driver.protocol.command - Sending command {find : BsonString{value='cooktops'}} to database enefficient on connection [connectionId{localValue:2, serverValue:200517}] to server ds163918.mlab.com:63918
-d16:37:11.646 [Test worker] DEBUG org.mongodb.driver.protocol.command - Command execution completed
-ú16:37:11.653 [Test worker] DEBUG org.mongodb.driver.protocol.command - Sending command {find : BsonString{value='dishwashers'}} to database enefficient on connection [connectionId{localValue:2, serverValue:200517}] to server ds163918.mlab.com:63918
-d16:37:11.713 [Test worker] DEBUG org.mongodb.driver.protocol.command - Command execution completed
-õ16:37:11.743 [Test worker] DEBUG org.mongodb.driver.protocol.command - Sending command {find : BsonString{value='dryers'}} to database enefficient on connection [connectionId{localValue:2, serverValue:200517}] to server ds163918.mlab.com:63918
-d16:37:11.782 [Test worker] DEBUG org.mongodb.driver.protocol.command - Command execution completed
-÷16:37:11.785 [Test worker] DEBUG org.mongodb.driver.protocol.command - Sending command {find : BsonString{value='freezers'}} to database enefficient on connection [connectionId{localValue:2, serverValue:200517}] to server ds163918.mlab.com:63918
-d16:37:11.842 [Test worker] DEBUG org.mongodb.driver.protocol.command - Command execution completed
-õ16:37:11.853 [Test worker] DEBUG org.mongodb.driver.protocol.command - Sending command {find : BsonString{value='ranges'}} to database enefficient on connection [connectionId{localValue:2, serverValue:200517}] to server ds163918.mlab.com:63918
-d16:37:11.927 [Test worker] DEBUG org.mongodb.driver.protocol.command - Command execution completed
-ü16:37:11.965 [Test worker] DEBUG org.mongodb.driver.protocol.command - Sending command {find : BsonString{value='washer-dryers'}} to database enefficient on connection [connectionId{localValue:2, serverValue:200517}] to server ds163918.mlab.com:63918
-d16:37:12.006 [Test worker] DEBUG org.mongodb.driver.protocol.command - Command execution completed
-ö16:37:12.009 [Test worker] DEBUG org.mongodb.driver.protocol.command - Sending command {find : BsonString{value='washers'}} to database enefficient on connection [connectionId{localValue:2, serverValue:200517}] to server ds163918.mlab.com:63918
-d16:37:12.081 [Test worker] DEBUG org.mongodb.driver.protocol.command - Command execution completed
-‰16:37:12.091 [Test worker] DEBUG org.mongodb.driver.protocol.command - Sending command {find : BsonString{value='refrigerators-wine-chiller'}} to database enefficient on connection [connectionId{localValue:2, serverValue:200517}] to server ds163918.mlab.com:63918
-d16:37:12.382 [Test worker] DEBUG org.mongodb.driver.protocol.command - Command execution completed
+ô14:23:50.297 [Test worker] DEBUG org.mongodb.driver.protocol.command - Sending command {find : BsonString{value='ovens'}} to database enefficient on connection [connectionId{localValue:2, serverValue:269247}] to server ds163918.mlab.com:63918
+d14:23:50.480 [Test worker] DEBUG org.mongodb.driver.protocol.command - Command execution completed
+ÿ14:23:50.650 [Test worker] DEBUG org.mongodb.driver.protocol.command - Sending command {find : BsonString{value='air-conditioning'}} to database enefficient on connection [connectionId{localValue:2, serverValue:269247}] to server ds163918.mlab.com:63918
+d14:23:50.892 [Test worker] DEBUG org.mongodb.driver.protocol.command - Command execution completed
+÷14:23:51.003 [Test worker] DEBUG org.mongodb.driver.protocol.command - Sending command {find : BsonString{value='cooktops'}} to database enefficient on connection [connectionId{localValue:2, serverValue:269247}] to server ds163918.mlab.com:63918
+d14:23:51.038 [Test worker] DEBUG org.mongodb.driver.protocol.command - Command execution completed
+ú14:23:51.042 [Test worker] DEBUG org.mongodb.driver.protocol.command - Sending command {find : BsonString{value='dishwashers'}} to database enefficient on connection [connectionId{localValue:2, serverValue:269247}] to server ds163918.mlab.com:63918
+d14:23:51.145 [Test worker] DEBUG org.mongodb.driver.protocol.command - Command execution completed
+õ14:23:51.171 [Test worker] DEBUG org.mongodb.driver.protocol.command - Sending command {find : BsonString{value='dryers'}} to database enefficient on connection [connectionId{localValue:2, serverValue:269247}] to server ds163918.mlab.com:63918
+d14:23:53.892 [Test worker] DEBUG org.mongodb.driver.protocol.command - Command execution completed
+÷14:23:53.900 [Test worker] DEBUG org.mongodb.driver.protocol.command - Sending command {find : BsonString{value='freezers'}} to database enefficient on connection [connectionId{localValue:2, serverValue:269247}] to server ds163918.mlab.com:63918
+d14:23:54.151 [Test worker] DEBUG org.mongodb.driver.protocol.command - Command execution completed
+õ14:23:54.165 [Test worker] DEBUG org.mongodb.driver.protocol.command - Sending command {find : BsonString{value='ranges'}} to database enefficient on connection [connectionId{localValue:2, serverValue:269247}] to server ds163918.mlab.com:63918
+d14:23:54.288 [Test worker] DEBUG org.mongodb.driver.protocol.command - Command execution completed
+ü14:23:54.329 [Test worker] DEBUG org.mongodb.driver.protocol.command - Sending command {find : BsonString{value='washer-dryers'}} to database enefficient on connection [connectionId{localValue:2, serverValue:269247}] to server ds163918.mlab.com:63918
+d14:23:54.366 [Test worker] DEBUG org.mongodb.driver.protocol.command - Command execution completed
+ö14:23:54.373 [Test worker] DEBUG org.mongodb.driver.protocol.command - Sending command {find : BsonString{value='washers'}} to database enefficient on connection [connectionId{localValue:2, serverValue:269247}] to server ds163918.mlab.com:63918
+d14:23:54.499 [Test worker] DEBUG org.mongodb.driver.protocol.command - Command execution completed
+‰14:23:54.520 [Test worker] DEBUG org.mongodb.driver.protocol.command - Sending command {find : BsonString{value='refrigerators-wine-chiller'}} to database enefficient on connection [connectionId{localValue:2, serverValue:269247}] to server ds163918.mlab.com:63918
+d14:23:55.154 [Test worker] DEBUG org.mongodb.driver.protocol.command - Command execution completed
 %Data import and parsing successful!
 HI
 Staber HXW2304

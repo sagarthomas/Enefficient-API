@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="LibraryTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2018-03-27T20:37:08" hostname="Dovahkiin" time="0.106">
+<testsuite name="LibraryTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2018-04-02T18:23:48" hostname="Dovahkiin" time="0.106">
   <properties/>
-  <testcase name="testSomeLibraryMethod" classname="LibraryTest" time="0.003"/>
-  <testcase name="testGson" classname="LibraryTest" time="0.103"/>
-  <system-out><![CDATA[{"uid":"yoo","email":"yohelpme@help.com","score":0.0,"appliances":[{"BRAND_NAME":"Woo","MODEL_NUM_1":"LP6","REC_REF_KEY":"nice"}]}
+  <testcase name="testSomeLibraryMethod" classname="LibraryTest" time="0.004"/>
+  <testcase name="testGson" classname="LibraryTest" time="0.101"/>
+  <system-out><![CDATA[{"uid":"yoo","email":"yohelpme@help.com","score":0.0,"houseType":0}
 117911
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>

@@ -1,6 +1,6 @@
 // Bag class from the textbook
 
-package adt;
+package model.util;
 
 import java.util.Iterator;
 

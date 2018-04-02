@@ -25,10 +25,6 @@ public class ControllerTest {
     	
     	Dataset.init();
     	
-    	
-    	
-    	    	
-		
 		switch(type) {
 			case "AirConditioner":
 				app = new AirConditionerADT[Dataset.getAirconditioners().size()];
