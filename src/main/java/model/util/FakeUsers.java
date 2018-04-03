@@ -1,6 +1,16 @@
 package model.util;
 
 import java.util.ArrayList;
+
+import org.bson.Document;
+import org.springframework.boot.autoconfigure.data.mongo.MongoReactiveDataAutoConfiguration;
+
+import com.google.gson.Gson;
+import com.mongodb.MongoClient;
+import com.mongodb.MongoClientURI;
+import com.mongodb.MongoURI;
+import com.mongodb.client.MongoDatabase;
+
 import model.adt.ApplianceADT;
 import model.adt.UserADT;
 import model.adt.UserGraph;
@@ -45,6 +55,35 @@ public class FakeUsers {
 	public ArrayList<UserADT> getFakeUsers() {
 		return fakeUsers;
 	}
+	
+	/*
+	public static void main(String [] args) {
+		
+		Gson gson = new Gson();
+		FakeUsers faker = new FakeUsers();
+		ArrayList<UserADT> users = faker.getFakeUsers();
+		
+		MongoClient client = new MongoClient(new MongoClientURI("mongodb://admin:flegends@ds119449.mlab.com:19449/enefficient-users"));
+		MongoDatabase db = client.getDatabase("enefficient-users");
+		db.createCollection("US5YEOOvrKYK4wL7L8FhElVm3Ev1");
+		UserADT user = new UserADT("US5YEOOvrKYK4wL7L8FhElVm3Ev1", "sagarthomas27@hotmail.com");
+		user.setAppliances(users.get(0).getAppliances());
+		String json = gson.toJson(user);
+		Document doc = Document.parse(json);
+		db.getCollection("US5YEOOvrKYK4wL7L8FhElVm3Ev1").insertOne(doc);
+		client.close();
+		/*
+		for(UserADT u : users) {
+			db.createCollection(u.getID());
+			String json = gson.toJson(u);
+			Document doc = Document.parse(json);
+			db.getCollection(u.getID()).insertOne(doc);
+		}
+		
+		//client.close();
+	}
+	*/
+	
 	
 	
 }
