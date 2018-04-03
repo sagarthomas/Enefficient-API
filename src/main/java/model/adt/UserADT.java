@@ -12,6 +12,7 @@ public class UserADT {
 	public UserADT(String uid, String email) {
 		this.uid = uid;
 		this.email = email;
+		this.appliances = new ArrayList<ArrayList<ApplianceADT>>(1);
 	}
 
 	public String getID() {

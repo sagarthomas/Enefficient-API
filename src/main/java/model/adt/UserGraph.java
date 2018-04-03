@@ -12,6 +12,7 @@ public class UserGraph {
 	
 	public UserGraph(ArrayList<UserADT> users, int V) {
 		this.V = V;
+		adj = (Bag<UserADT>[]) new Bag[V];
 		
 		for (int v = 0; v < V; v++)
 			adj[v] = new Bag<UserADT>();

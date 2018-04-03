@@ -80,6 +80,6 @@ public class AirConditionerADT extends ApplianceADT {
 	}
 	
 	public String getConsumption() {
-		return "Fix";
+		return Double.toString(Double.parseDouble(this.COOL_CAP_BTU) * 1055.06);
 	}
 }

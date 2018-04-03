@@ -132,6 +132,8 @@ public class Recommend {
 	
 	private void calcAverages() {
 		
+		Dataset.init();
+		
 		for (int i = 0; i < Dataset.REFRIDGERATORS.size(); i++) {
 			fridgeAvg = fridgeAvg + Double.parseDouble(Dataset.REFRIDGERATORS.get(i).getConsumption());
 		}
@@ -214,6 +216,7 @@ public class Recommend {
 						break;
 						
 					case 3:
+						
 						if (Double.parseDouble(((WasherDryerADT)apps.get(i)).getConsumption()) < washdryAvg && washdryAvg - Double.parseDouble(((WasherDryerADT)apps.get(i)).getConsumption()) > diff) {
 							replace = apps.get(i);
 							diff = washdryAvg - Double.parseDouble(((WasherDryerADT)apps.get(i)).getConsumption());
@@ -289,6 +292,10 @@ public class Recommend {
 	
 	public String getType() {
 		return type;
+	}
+	
+	public int replaceID() {
+		return replaceID;
 	}
 
 }
