@@ -14,9 +14,6 @@ import model.FindAppliance;
 @RestController
 public class ControllerTest {
 		private static ApplianceADT[] app;
-		
-		
-    
 
     @RequestMapping("/find")
     public ApplianceReturn find(@RequestParam(value="type", defaultValue="World") String type, @RequestParam(value="brand", defaultValue="World") String brand, @RequestParam(value="model", defaultValue="World") String model) {
