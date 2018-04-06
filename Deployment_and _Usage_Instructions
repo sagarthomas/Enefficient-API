@@ -1,0 +1,54 @@
+
+											Enefficient API Deployment and Usage Document
+
+================================================================================================================================
+
+The Enefficient API uses the Gradle build system to compile all dependencies and compile the Java code itself. All JUnit
+test cases are run automatically when gradle builds and the build will only succeed when all test cases pass. 
+
+Do NOT try to run this project as a normal Java eclipse project as this project compiles down to an REST API and is not suited
+to run in the eclipse console.
+
+A terminal is required to deploy this run this project.
+		
+		UNIX Systems	- built-in terminal should function fine
+		Windows 		- Command Prompt or Windows Powershell or Git Bash
+		
+Make sure to cd into the root directory of the project which will look like this:
+
+			├──.gradle
+			├──.settings
+			├──bin
+			├──build
+			├──gradle
+			├──src
+			├──.classpath
+			├──.gitignore
+			├──.project
+			├──build.gradle
+			├──Deployment_and_Usage_Instructions
+			├──gradlew
+			├──gradlew.bat
+			├──settings.gradle
+			├── build.gradle
+			├── settings.gradle
+		
+The gradle version of this project is 4.6 so if thats installed on your computer, use build option 2.
+
+If you have a different version of gradle or do not have gradle installed at all or you have no idea, use build option 1.
+
+** To check the version of gradle, run the following command on any of the previously mentioned terminals above:
+			
+			gradle --version
+
+	
+Build Option 1 (Preferred): 
+			
+			gradlew build
+						
+Build Option 2: 
+	
+			gradle build
+			
+
+** gradlew uses the wrapper configured with the project that installs the correct version of gradle 	

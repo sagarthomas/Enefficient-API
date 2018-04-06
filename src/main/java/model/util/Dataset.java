@@ -17,9 +17,10 @@ import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
 
 /**
- * This class is used to retrieve the dataset information from the database
+ * This class is used to retrieve the dataset information from Enefficient's database hosted on
+ * MLab powered by the MongoDB framework. The Dataset class separates all of its appliance data by type
+ * of appliance.
  * @author Sagar Thomas
- *
  */
 public class Dataset {
 	// ArrayLists for appliances
@@ -38,6 +39,11 @@ public class Dataset {
 	private static Gson gson;
 	private static JsonObject[] data;
 	
+	/**
+	 * This method initializes the local database by retrieving the data stored in MongoDB. The local data is available until
+	 * the end of the REST API call so every new REST API call must call this method before using it.
+	 * @return true if initialization is successful and false otherwise.
+	 */
 	public static boolean init() {
 		parser = new JsonParser();
 		gson = new Gson();
@@ -48,10 +54,6 @@ public class Dataset {
 			MongoClient client = new MongoClient(new MongoClientURI("mongodb://admin:yohelpme@ds163918.mlab.com:63918/enefficient"));
 			// Create the database locally
 			MongoDatabase db = client.getDatabase("enefficient");
-			
-			for (String name : db.listCollectionNames()) {
-			    System.out.println(name);
-			}
 			
 			MongoCollection<Document> ovens = db.getCollection("ovens");
 			MongoCollection<Document> ac = db.getCollection("air-conditioning");
@@ -73,17 +75,13 @@ public class Dataset {
 			data[6] = parser.parse(new BasicDBObject(ranges.find().first()).toJson()).getAsJsonObject();
 			data[7] = parser.parse(new BasicDBObject(washer_dryers.find().first()).toJson()).getAsJsonObject();
 			data[8] = parser.parse(new BasicDBObject(washers.find().first()).toJson()).getAsJsonObject();
-			// Fridge data is in two seperate documents due to its size so retrival is a bit different
+			// Fridge data is in two separate documents due to its size so retrieval is a bit different
 			FindIterable<Document> documents = fridges.find();
 			int i = 0;
 			for (Document doc : documents) {
 				data[9 + i] = parser.parse(new BasicDBObject(doc).toJson()).getAsJsonObject();
 				i++;
 			}
-			
-			
-			
-			//JsonObject applianceData = parser.parse(new FileReader("src\\\\model\\\\data\\\\appliances.json")).getAsJsonObject();
 			
 			populateACs(data[1], gson);
 			populateCooktops(data[2], gson);
@@ -95,8 +93,6 @@ public class Dataset {
 			populateRefridgerators(data[9], data[10], gson);
 			populateWasherDryers(data[7], gson);
 			populateWashers(data[8], gson);
-			
-		
 			
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -251,42 +247,81 @@ public class Dataset {
 		}
 	}
 
+	/**
+	 * Getter method to get a list of all Air-Conditioners in the database
+	 * @return list of all Air-Conditioners
+	 */
 	public static ArrayList<AirConditionerADT> getAirconditioners() {
 		return AIRCONDITIONERS;
 	}
-
+	/**
+	 * Getter method to get a list of all Clothes Dryers in the database
+	 * @return list of all Clothes Dryers
+	 */
 	public static ArrayList<ClothesDryerADT> getDryers() {
 		return DRYERS;
 	}
 
+	/**
+	 * Getter method to get a list of all Cooktops in the database
+	 * @return list of all Cooktops
+	 */
 	public static ArrayList<CooktopADT> getCooktops() {
 		return COOKTOPS;
 	}
 
+	/**
+	 * Getter method to get a list of all Dishwashers in the database
+	 * @return list of all Dishwashers
+	 */
 	public static ArrayList<DishwasherADT> getDishwashers() {
 		return DISHWASHERS;
 	}
 
+	/**
+	 * Getter method to get a list of all Freezers in the database
+	 * @return list of all Freezers
+	 */
 	public static ArrayList<FreezerADT> getFreezers() {
 		return FREEZERS;
 	}
 
+	/**
+	 * Getter method to get a list of all Ovens in the database
+	 * @return list of all Ovens
+	 */
 	public static ArrayList<OvenADT> getOvens() {
 		return OVENS;
 	}
 
+	/**
+	 * Getter method to get a list of all Ranges in the database
+	 * @return list of all Ranges
+	 */
 	public static ArrayList<RangeADT> getRanges() {
 		return RANGES;
 	}
 
+	/**
+	 * Getter method to get a list of all Refrigerators in the database
+	 * @return list of all Refrigerators
+	 */
 	public static ArrayList<RefridgeratorADT> getRefridgerators() {
 		return REFRIDGERATORS;
 	}
 
+	/**
+	 * Getter method to get a list of all Washers in the database
+	 * @return list of all Washers
+	 */
 	public static ArrayList<WasherADT> getWashers() {
 		return WASHERS;
 	}
 
+	/**
+	 * Getter method to get a list of all Washer Dryers in the database
+	 * @return list of all Washer Dryers
+	 */
 	public static ArrayList<WasherDryerADT> getWasherDryers() {
 		return WASHER_DRYERS;
 	}
