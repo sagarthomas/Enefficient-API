@@ -1,3 +1,8 @@
+/**
+ * This class is a Spring MVC controller which takes in details of an appliance and attempts to find it in the dataset
+ * @author Matthew Dombrady
+ */
+
 package app;
 
 import java.util.concurrent.atomic.AtomicLong;
@@ -13,6 +18,8 @@ import model.FindAppliance;
 
 @RestController
 public class ControllerTest {
+	
+		// This array will contain the list of appliances from the dataset of the specified type to be searched
 		private static ApplianceADT[] app;
 		
 		
@@ -25,7 +32,13 @@ public class ControllerTest {
     	
     	Dataset.init();
     	
-		switch(type) {
+		try {
+			
+			// This "switch" statement checks the type of the desired appliance, and calls the FindAppliance class to find it in the dataset.
+			// The proper casting is then performed, and the important information from the appliance is returned as an ApplianceReturn object
+			// Merge sort must be called first because FindAppliance employs binary search.
+			
+			switch(type) {
 			case "AirConditioner":
 				app = new AirConditionerADT[Dataset.getAirconditioners().size()];
 				Dataset.getAirconditioners().toArray(app);
@@ -101,6 +114,10 @@ public class ControllerTest {
 		
 		}
     	
-    	     
+    
+		} catch (Exception e) {
+			// If appliance is not found, a casting error will occur.  In this case, return a placeholder object
+			return new ApplianceReturn("Not found", "Not found", "Not found", "Not found");
+		}     
     }
 }

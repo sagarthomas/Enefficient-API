@@ -1,9 +1,32 @@
+/**
+ * This class defines the Freezer ADT which inherits from the ApplianceADT class.  It is used to store information about appliances from the freezer dataset
+ * @author Matthew Dombrady
+ */
+
 package model.adt;
 
 public class FreezerADT extends ApplianceADT {
 	
+	// These class variables contain every field from the appliances in the freezers dataset
 	private String AEC, EG_WEB_SHAPE_LABEL_EN, EG_WEB_SHAPE_LABEL_FR, VOL_LIT, VOL_CUB, TYPE_LABEL_EN, TYPE_LABEL_FR, SIZE_CATEGORY, EG_WEB_DEFROST_LABEL_EN, EG_WEB_DEFROST_LABEL_FR, HR24_FREEZE_KG;
 	
+	/**
+	 * This constructor creates a FreezerADT object
+	 * @param BRAND_NAME The appliance's brand name
+	 * @param MODEL_NUM_1 The appliance's model number
+	 * @param REC_REF_KEY The appliance's unique reference key
+	 * @param AEC A number representing the freezer's annual energy consumption in gigajoules
+	 * @param EG_WEB_SHAPE_LABEL_EN An unused field
+	 * @param EG_WEB_SHAPE_LABEL_FR An unused field
+	 * @param VOL_LIT An unused field
+	 * @param VOL_CUB An unused field
+	 * @param TYPE_LABEL_EN An unused field
+	 * @param TYPE_LABEL_FR An unused field
+	 * @param SIZE_CATEGORY An unused field
+	 * @param EG_WEB_DEFROST_LABEL_EN An unused field
+	 * @param EG_WEB_DEFROST_LABEL_FR An unused field
+	 * @param HR24_FREEZE_KG An unused field
+	 */
 	public FreezerADT(String BRAND_NAME, String MODEL_NUM_1, String REC_REF_KEY, String AEC, String EG_WEB_SHAPE_LABEL_EN, String EG_WEB_SHAPE_LABEL_FR, String VOL_LIT, String VOL_CUB, String TYPE_LABEL_EN, String TYPE_LABEL_FR, String SIZE_CATEGORY, String EG_WEB_DEFROST_LABEL_EN, String EG_WEB_DEFROST_LABEL_FR, String HR24_FREEZE_KG) {
 		super(BRAND_NAME, MODEL_NUM_1, REC_REF_KEY);
 		
@@ -19,6 +42,8 @@ public class FreezerADT extends ApplianceADT {
 		this.EG_WEB_DEFROST_LABEL_FR = EG_WEB_DEFROST_LABEL_FR;
 		this.HR24_FREEZE_KG = HR24_FREEZE_KG;
 	}
+	
+	// The below methods are getters for every class variable
 	
 	public String getAEC() {
 		return this.AEC;

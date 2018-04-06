@@ -1,9 +1,38 @@
+/**
+ * This class defines the Oven ADT which inherits from the ApplianceADT class.  It is used to store information about appliances from the ovens dataset
+ * @author Matthew Dombrady
+ */
+
 package model.adt;
 
 public class OvenADT extends ApplianceADT {
 	
+	// These class variables contain every field from the appliances in the ovens database
 	private String AEC_03, TYPE_LABEL_EN, TYPE_LABEL_FR, EQUIP_TYPE_LABEL_EN, EQUIP_TYPE_LABEL_FR, U_TYPE_LABEL_EN, U_TYPE_LABEL_FR, L_TYPE_LABEL_EN, L_TYPE_LABEL_FR, U_COOK_METH_LABEL_EN, U_COOK_METH_LABEL_FR, L_COOK_METH_LABEL_EN, L_COOK_METH_LABEL_FR, U_USABLE_SPACE, L_USABLE_SPACE, NOMINAL_WIDTH_LABEL_EN, NOMINAL_WIDTH_LABEL_FR; 
 	
+	/**
+	 * This constructor creates an OvenADT object
+	 * @param BRAND_NAME The appliance's brand name
+	 * @param MODEL_NUM_1 The appliance's model number
+	 * @param REC_REF_KEY The appliance's unique reference key
+	 * @param AEC_03 A number representing the oven's annual energy consumption in gigajoules
+	 * @param TYPE_LABEL_EN An unused field
+	 * @param TYPE_LABEL_FR An unused field
+	 * @param EQUIP_TYPE_LABEL_EN An unused field
+	 * @param EQUIP_TYPE_LABEL_FR An unused field
+	 * @param U_TYPE_LABEL_EN An unused field
+	 * @param U_TYPE_LABEL_FR An unused field
+	 * @param L_TYPE_LABEL_EN An unused field
+	 * @param L_TYPE_LABEL_FR An unused field
+	 * @param U_COOK_METH_LABEL_EN An unused field
+	 * @param U_COOK_METH_LABEL_FR An unused field
+	 * @param L_COOK_METH_LABEL_EN An unused field
+	 * @param L_COOK_METH_LABEL_FR An unused field
+	 * @param U_USABLE_SPACE An unused field
+	 * @param L_USABLE_SPACE An unused field
+	 * @param NOMINAL_WIDTH_LABEL_EN An unused field
+	 * @param NOMINAL_WIDTH_LABEL_FR An unused field
+	 */
 	public OvenADT(String BRAND_NAME, String MODEL_NUM_1, String REC_REF_KEY, String AEC_03, String TYPE_LABEL_EN, String TYPE_LABEL_FR, String EQUIP_TYPE_LABEL_EN, String EQUIP_TYPE_LABEL_FR, String U_TYPE_LABEL_EN, String U_TYPE_LABEL_FR, String L_TYPE_LABEL_EN, String L_TYPE_LABEL_FR, String U_COOK_METH_LABEL_EN, String U_COOK_METH_LABEL_FR, String L_COOK_METH_LABEL_EN, String L_COOK_METH_LABEL_FR, String U_USABLE_SPACE, String L_USABLE_SPACE, String NOMINAL_WIDTH_LABEL_EN, String NOMINAL_WIDTH_LABEL_FR) {
 		super(BRAND_NAME, MODEL_NUM_1, REC_REF_KEY);
 		
@@ -25,6 +54,8 @@ public class OvenADT extends ApplianceADT {
 		this.NOMINAL_WIDTH_LABEL_EN = NOMINAL_WIDTH_LABEL_EN;
 		this.NOMINAL_WIDTH_LABEL_FR = NOMINAL_WIDTH_LABEL_FR;
 	}
+	
+	// The below methods are getters for every class variable
 	
 	public String getAEC_03() {
 		return this.AEC_03;

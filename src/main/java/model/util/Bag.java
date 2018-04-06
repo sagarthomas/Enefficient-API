@@ -1,4 +1,7 @@
-// Bag class from the textbook
+/**
+ * This class is the Bag module from the textbook.  No methods are changed.
+ * @author Matthew Dombrady
+ */
 
 package model.util;
 
