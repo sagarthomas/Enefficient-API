@@ -1,4 +1,7 @@
-// This class contains a method which takes in a UserADT and calculates its energy usage score based on his/her house type 
+/**
+ * This class contains a method which takes in a UserADT and calculates its energy usage score based on his/her house type
+ * @author Matthew Dombrady
+ */
 
 package model.util;
 
@@ -6,7 +9,10 @@ import model.adt.*;
 
 public class CalculateScore {
 	
-	
+	/**
+	 * This method receives a UserADT as a parameter and calculates that user's energy score
+	 * @param user A UserADT object corresponding to a user
+	 */
 	public static void calcScore(UserADT user) {
 		
 		// This array contains the average annual electricity usage (in gigajoules) for all seven house types in Ontario
@@ -74,6 +80,7 @@ public class CalculateScore {
 		
 		
 		// This switch statement assigns the user's energy score based on his/her house type
+		// A separate score() method is used to calculate the actual number from 0 to 10
 		switch(user.getHouseType()) {
 		
 		case 0:
@@ -106,10 +113,13 @@ public class CalculateScore {
 		}
 	}
 	
+	/**
+	 * This method calculates a user's score from 0 to 10 based on the difference found in the above method
+	 * @param diff The difference calculated in calcScore()
+	 * @return The score from 0 to 10
+	 */
 	private static int score(double diff) {
-		
-		//System.out.println(diff);
-		
+				
 		if (diff > 0)
 			return 10;
 		else if (-5 <= diff && diff <= 0)
