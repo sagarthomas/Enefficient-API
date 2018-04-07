@@ -14,7 +14,7 @@ import model.util.FakeUsers;
 public class FakeUsersController {
 	
 	
-	@RequestMapping("\fake")
+	@RequestMapping("/fake")
 	public void fake() {
 		FakeUsers fakeUsers = new FakeUsers();
 	}

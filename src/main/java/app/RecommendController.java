@@ -53,9 +53,6 @@ public class RecommendController {
 		
 		
 		
-		
-		
-		
 		return new ApplianceReturn(a.getBRAND_NAME(), a.getMMODEL_NUM_1(), r.getType(), r.getConsumption());
 	}
 

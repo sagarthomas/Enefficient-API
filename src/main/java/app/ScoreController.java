@@ -21,12 +21,21 @@ import com.mongodb.client.MongoDatabase;
 import model.adt.ApplianceADT;
 import model.adt.UserADT;
 import model.util.CalculateScore;
-
+/**
+ * Spring controller that calculates and returns a specific user's score
+ * @author Sagar Thomas
+ *
+ */
 @RestController
 public class ScoreController {
 	
 	private ArrayList<UserADT> users;
 
+	/**
+	 * Mapped REST url path for creating getting the score of a user
+	 * @param id
+	 * @return score of user with specified id
+	 */
 	@RequestMapping("/users/{id}/score")
 	public double score(@PathVariable String id) {
 		JsonParser parser = new JsonParser();
@@ -41,12 +50,16 @@ public class ScoreController {
 		}
 		client.close();
 		
+		UserADT currentUser = users.get(0);
 		for (UserADT u : users) {
+			if (id.equals(u.getID())) {
+				currentUser = u;
+			}
 			CalculateScore.calcScore(u);
 			addMongo(u);
 		}
 		
-		return 0.0;
+		return currentUser.getScore();
 	}
 	
 	private void addMongo(UserADT u) {
