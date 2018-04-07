@@ -42,5 +42,9 @@ public class ApplianceReturn {
 	public String getConsumption() {
 		return this.consumption;
 	}
+	
+	public String toString() {
+		return this.brand + ", " + this.model + ", " + this.type + ", " + this.consumption;
+	}
 
 }

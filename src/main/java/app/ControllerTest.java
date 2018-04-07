@@ -38,6 +38,7 @@ public class ControllerTest {
 	
 		// This array will contain the list of appliances from the dataset of the specified type to be searched
 		private static ApplianceADT[] app;
+		private ApplianceReturn appReturn;
 
     @RequestMapping(value = "/users/{id}/find")
     public ApplianceReturn find(@PathVariable String id,@RequestParam(value="type", defaultValue="World") String type, @RequestParam(value="brand", defaultValue="World") String brand, @RequestParam(value="model", defaultValue="World") String model) {
@@ -58,80 +59,90 @@ public class ControllerTest {
 				Dataset.getAirconditioners().toArray(app);
 				MergeSort.sort(app);
 				ApplianceADT found1 = FindAppliance.find(app, brand, model);
-				addMongo(id, found1, 9);
-				return new ApplianceReturn(found1.getBRAND_NAME(), found1.getMMODEL_NUM_1() , type, ((AirConditionerADT)found1).getConsumption());
+				appReturn = new ApplianceReturn(found1.getBRAND_NAME(), found1.getMMODEL_NUM_1() , type, ((AirConditionerADT)found1).getConsumption());
+				addMongo(id, appReturn);
+				return appReturn;
 		
 			case "Dryer":
 				app = new ClothesDryerADT[Dataset.getDryers().size()];
 				Dataset.getDryers().toArray(app);
 				MergeSort.sort(app);
 				ApplianceADT found2 = FindAppliance.find(app, brand, model);
-				addMongo(id, found2, 2);
-				return new ApplianceReturn(found2.getBRAND_NAME(), found2.getMMODEL_NUM_1() , type, ((ClothesDryerADT)found2).getConsumption());
+				appReturn = new ApplianceReturn(found2.getBRAND_NAME(), found2.getMMODEL_NUM_1() , type, ((ClothesDryerADT)found2).getConsumption());
+				addMongo(id, appReturn);
+				return appReturn;
 				
 			case "Cooktop":
 				app = new CooktopADT[Dataset.getCooktops().size()];
 				Dataset.getCooktops().toArray(app);
 				MergeSort.sort(app);
 				ApplianceADT found3 = FindAppliance.find(app, brand, model);
-				addMongo(id, found3, 6);
-				return new ApplianceReturn(found3.getBRAND_NAME(), found3.getMMODEL_NUM_1() , type, ((CooktopADT)found3).getConsumption());
+				appReturn = new ApplianceReturn(found3.getBRAND_NAME(), found3.getMMODEL_NUM_1() , type, ((CooktopADT)found3).getConsumption());
+				addMongo(id, appReturn);
+				return appReturn;
 				
 			case "Dishwasher":
 				app = new DishwasherADT[Dataset.getDishwashers().size()];
 				Dataset.getDishwashers().toArray(app);
 				MergeSort.sort(app);
 				ApplianceADT found4 = FindAppliance.find(app, brand, model);
-				addMongo(id, found4, 7);
-				return new ApplianceReturn(found4.getBRAND_NAME(), found4.getMMODEL_NUM_1() , type, ((DishwasherADT)found4).getConsumption());
+				appReturn = new ApplianceReturn(found4.getBRAND_NAME(), found4.getMMODEL_NUM_1() , type, ((DishwasherADT)found4).getConsumption());
+				addMongo(id, appReturn);
+				return appReturn;
 			
 			case "Freezer":
 				app = new FreezerADT[Dataset.getFreezers().size()];
 				Dataset.getFreezers().toArray(app);
 				MergeSort.sort(app);
 				ApplianceADT found5 = FindAppliance.find(app, brand, model);
-				addMongo(id, found5, 4);
-				return new ApplianceReturn(found5.getBRAND_NAME(), found5.getMMODEL_NUM_1() , type, ((FreezerADT)found5).getConsumption());
+				appReturn = new ApplianceReturn(found5.getBRAND_NAME(), found5.getMMODEL_NUM_1() , type, ((FreezerADT)found5).getConsumption());
+				addMongo(id, appReturn);
+				return appReturn;
 			
 			case "Oven":
 				app = new OvenADT[Dataset.getOvens().size()];
 				Dataset.getOvens().toArray(app);
 				MergeSort.sort(app);
 				ApplianceADT found6 = FindAppliance.find(app, brand, model);
-				addMongo(id, found6, 5);
-				return new ApplianceReturn(found6.getBRAND_NAME(), found6.getMMODEL_NUM_1() , type, ((OvenADT)found6).getConsumption());
+				appReturn = new ApplianceReturn(found6.getBRAND_NAME(), found6.getMMODEL_NUM_1() , type, ((OvenADT)found6).getConsumption());
+				addMongo(id, appReturn);
+				return appReturn;
 			
 			case "Range":
 				app = new RangeADT[Dataset.getRanges().size()];
 				Dataset.getRanges().toArray(app);
 				MergeSort.sort(app);
 				ApplianceADT found7 = FindAppliance.find(app, brand, model);
-				addMongo(id, found7, 8);
-				return new ApplianceReturn(found7.getBRAND_NAME(), found7.getMMODEL_NUM_1() , type, ((RangeADT)found7).getConsumption());
+				appReturn = new ApplianceReturn(found7.getBRAND_NAME(), found7.getMMODEL_NUM_1() , type, ((RangeADT)found7).getConsumption());
+				addMongo(id, appReturn);
+				return appReturn;
 			
 			case "Refridgerator":
 				app = new RefridgeratorADT[Dataset.getRefridgerators().size()];
 				Dataset.getRefridgerators().toArray(app);
 				MergeSort.sort(app);
 				ApplianceADT found8 = FindAppliance.find(app, brand, model);
-				addMongo(id, found8, 0);
-				return new ApplianceReturn(found8.getBRAND_NAME(), found8.getMMODEL_NUM_1() , type, ((RefridgeratorADT)found8).getConsumption());
+				appReturn = new ApplianceReturn(found8.getBRAND_NAME(), found8.getMMODEL_NUM_1() , type, ((RefridgeratorADT)found8).getConsumption());
+				addMongo(id, appReturn);
+				return appReturn;
 			
 			case "Washer":
 				app = new WasherADT[Dataset.getWashers().size()];
 				Dataset.getWashers().toArray(app);
 				MergeSort.sort(app);
 				ApplianceADT found9 = FindAppliance.find(app, brand, model);
-				addMongo(id, found9, 1);
-				return new ApplianceReturn(found9.getBRAND_NAME(), found9.getMMODEL_NUM_1() , type, ((WasherADT)found9).getConsumption());
+				appReturn = new ApplianceReturn(found9.getBRAND_NAME(), found9.getMMODEL_NUM_1() , type, ((WasherADT)found9).getConsumption());
+				addMongo(id, appReturn);
+				return appReturn;
 			
 			case "Washer-Dryer":
 				app = new WasherDryerADT[Dataset.getWasherDryers().size()];
 				Dataset.getWasherDryers().toArray(app);
 				MergeSort.sort(app);
 				ApplianceADT found10 = FindAppliance.find(app, brand, model);
-				addMongo(id, found10, 3);
-				return new ApplianceReturn(found10.getBRAND_NAME(), found10.getMMODEL_NUM_1() , type, ((WasherDryerADT)found10).getConsumption());
+				appReturn = new ApplianceReturn(found10.getBRAND_NAME(), found10.getMMODEL_NUM_1() , type, ((WasherDryerADT)found10).getConsumption());
+				addMongo(id, appReturn);
+				return appReturn;
 				
 			default:
 				return new ApplianceReturn(type, brand, model, "0");
@@ -146,7 +157,9 @@ public class ControllerTest {
 
     }
     
-    private void addMongo(String id, ApplianceADT a, int index) {
+    // I took out the parameter "index" cause it's only a 1D list now
+    // I also changed the type of "a" to ApplianceReturn
+    private void addMongo(String id, ApplianceReturn a) {
     	JsonParser parser = new JsonParser();
     	Gson gson = new Gson();
     	MongoClient client = new MongoClient(new MongoClientURI("mongodb://admin:flegends@ds119449.mlab.com:19449/enefficient-users"));
