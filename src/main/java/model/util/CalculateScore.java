@@ -5,6 +5,7 @@
 
 package model.util;
 
+import app.ApplianceReturn;
 import model.adt.*;
 
 public class CalculateScore {
@@ -23,55 +24,9 @@ public class CalculateScore {
 		int numberOfApps = 0;
 		
 		
-		// These loops calculate the user's average energy usage.  There is one for every type of appliance so casting can be easily performed
-		for (int i = 0; i < user.getAppliances().get(0).size(); i++) {
-			average += Double.parseDouble(((RefridgeratorADT)user.getAppliances().get(0).get(i)).getConsumption());
-			numberOfApps++;
-		}
-		
-		for (int i = 0; i < user.getAppliances().get(1).size(); i++) {
-			average += Double.parseDouble(((WasherADT)user.getAppliances().get(1).get(i)).getConsumption());
-			numberOfApps++;
-		}
-		
-		for (int i = 0; i < user.getAppliances().get(2).size(); i++) {
-			average += Double.parseDouble(((ClothesDryerADT)user.getAppliances().get(2).get(i)).getConsumption());
-			numberOfApps++;
-		}
-		
-		for (int i = 0; i < user.getAppliances().get(3).size(); i++) {
-			average += Double.parseDouble(((WasherDryerADT)user.getAppliances().get(3).get(i)).getConsumption());
-			numberOfApps++;
-		}
-		
-		for (int i = 0; i < user.getAppliances().get(4).size(); i++) {
-			average += Double.parseDouble(((FreezerADT)user.getAppliances().get(4).get(i)).getConsumption());
-			numberOfApps++;
-		}
-		
-		for (int i = 0; i < user.getAppliances().get(5).size(); i++) {
-			average += Double.parseDouble(((OvenADT)user.getAppliances().get(5).get(i)).getConsumption());
-			numberOfApps++;
-		}
-		
-		for (int i = 0; i < user.getAppliances().get(6).size(); i++) {
-			average += Double.parseDouble(((CooktopADT)user.getAppliances().get(6).get(i)).getConsumption());
-			numberOfApps++;
-		}
-		
-		for (int i = 0; i < user.getAppliances().get(7).size(); i++) {
-			average += Double.parseDouble(((DishwasherADT)user.getAppliances().get(7).get(i)).getConsumption());
-			numberOfApps++;
-		}
-		
-		for (int i = 0; i < user.getAppliances().get(8).size(); i++) {
-			average += Double.parseDouble(((RangeADT)user.getAppliances().get(8).get(i)).getConsumption());
-			numberOfApps++;
-		}
-		
-		for (int i = 0; i < user.getAppliances().get(9).size(); i++) {
-			average += Double.parseDouble(((AirConditionerADT)user.getAppliances().get(9).get(i)).getConsumption());
-			numberOfApps++;
+		// This loop calculates the user's average energy usage
+		for (ApplianceReturn a : user.getAppliances()) {
+			average += Double.parseDouble(a.getConsumption());
 		}
 		
 		// The average
