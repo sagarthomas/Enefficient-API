@@ -159,6 +159,7 @@ public class ControllerTest {
     
     // I took out the parameter "index" cause it's only a 1D list now
     // I also changed the type of "a" to ApplianceReturn
+    /*
     private void addMongo(String id, ApplianceReturn a) {
     	JsonParser parser = new JsonParser();
     	Gson gson = new Gson();
@@ -175,4 +176,5 @@ public class ControllerTest {
 		uCol.insertOne(doc);
 		client.close();
     }
+    */
 }

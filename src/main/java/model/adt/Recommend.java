@@ -7,6 +7,7 @@ package model.adt;
 
 import java.util.ArrayList;
 
+import app.ApplianceReturn;
 //import model.util.Bag;
 import model.util.Dataset;
 
@@ -28,7 +29,7 @@ public class Recommend {
 	private int userIndex, replaceID;
 	
 	// userApps will contain the current user's appliances
-	private ArrayList<ArrayList<ApplianceADT>> userApps;
+	private ArrayList<ApplianceReturn> userApps;
 	
 	// These variables will contain the average energy consumption for each type of appliance
 	private double fridgeAvg, washerAvg, dryerAvg, washdryAvg, freezerAvg, ovenAvg, cooktopAvg, dishwasherAvg, rangeAvg, ACAvg;
