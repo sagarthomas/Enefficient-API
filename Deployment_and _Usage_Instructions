@@ -44,7 +44,7 @@ If you have a different version of gradle or do not have gradle installed at all
 	
 Build Option 1 (Preferred): 
 			
-			gradlew build
+			gradlew build (cmd prompt)    or   ./gradlew build  (git bash, powershell)  or .\gradlew build  (cmd prompt, powershell)
 						
 Build Option 2: 
 	
