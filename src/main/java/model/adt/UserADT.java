@@ -2,17 +2,19 @@ package model.adt;
 
 import java.util.ArrayList;
 
+import app.ApplianceReturn;
+
 public class UserADT {
 	
 	private String uid, location, email;
 	private double score;
 	private int houseType;
-	private ArrayList<ArrayList<ApplianceADT>> appliances;
+	private ArrayList<ApplianceReturn> appliances;
 	
 	public UserADT(String uid, String email) {
 		this.uid = uid;
 		this.email = email;
-		this.appliances = new ArrayList<ArrayList<ApplianceADT>>(1);
+		this.appliances = new ArrayList<ApplianceReturn>();
 	}
 
 	public String getID() {
@@ -52,11 +54,11 @@ public class UserADT {
 		this.score = score;
 	}
 
-	public ArrayList<ArrayList<ApplianceADT>> getAppliances() {
+	public ArrayList<ApplianceReturn> getAppliances() {
 		return appliances;
 	}
 
-	public void setAppliances(ArrayList<ArrayList<ApplianceADT>> appliances) {
+	public void setAppliances(ArrayList<ApplianceReturn> appliances) {
 		this.appliances = appliances;
 	}
 	
