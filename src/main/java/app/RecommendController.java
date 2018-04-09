@@ -49,11 +49,11 @@ public class RecommendController {
 		
 		UserGraph G = new UserGraph(users, 7);
 		Recommend r = new Recommend(G, id);
-		ApplianceADT a = r.replace();
+		ApplianceReturn a = r.getReplace();
 		
 		
 		
-		return new ApplianceReturn(a.getBRAND_NAME(), a.getMMODEL_NUM_1(), r.getType(), r.getConsumption());
+		return a;
 	}
 
 }

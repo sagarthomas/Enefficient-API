@@ -4,8 +4,9 @@ public class ApplicationDetails {
 
 	// General
 	public static final String APP_NAME = "Enefficient-API";
-	public static final String VERSION = "1.0";
-	public static final String DESCRIPTION = "";
+	public static final String VERSION = "1.5";
+	public static final String DESCRIPTION = "Enefficient is a application that checks the total efficiency of your home by calculating the total energy usage"
+			+ " of a user's appliances and compares that to the averages found in Canada based off type of home and location.";
 	public static final String AUTHORS = "Matthew Dombrady, Sagar Thomas";
 	public static final String COURSE = "SFWRENG 2XB3";
 	

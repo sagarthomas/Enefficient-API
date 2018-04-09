@@ -5,6 +5,10 @@
 
 package model.adt;
 
+/**
+ * This class defines the Appliance ADT which will be the superclass every type of appliance inherits from
+ * @author Matthew Dombrady
+ */
 public class ApplianceADT {
 
 	// These class variables contain every field common between all types of appliances from the datasets 

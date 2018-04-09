@@ -37,6 +37,10 @@ public class Recommend {
 	// replace will contain the ApplianceADT corresponding to the appliance recommended to the user as a replacement
 	private ApplianceReturn replace;
 	
+	public ApplianceReturn getReplace() {
+		return replace;
+	}
+
 	/**
 	 * This constructor creates a Recommend object
 	 * @param G A graph of users

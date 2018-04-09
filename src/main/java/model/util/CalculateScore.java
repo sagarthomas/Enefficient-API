@@ -1,13 +1,13 @@
-/**
- * This class contains a method which takes in a UserADT and calculates its energy usage score based on his/her house type
- * @author Matthew Dombrady
- */
 
 package model.util;
 
 import app.ApplianceReturn;
 import model.adt.*;
 
+/**
+ * This class contains a method which takes in a UserADT and calculates its energy usage score based on his/her house type
+ * @author Matthew Dombrady
+ */
 public class CalculateScore {
 	
 	/**

@@ -1,10 +1,10 @@
+
+
+package model.adt;
 /**
  * This class defines the Range ADT which inherits from the ApplianceADT class.  It is used to store information about appliances from the ranges dataset
  * @author Matthew Dombrady
  */
-
-package model.adt;
-
 public class RangeADT extends ApplianceADT {
 	
 	// These class variables contain every field from the appliances in the ranges dataset

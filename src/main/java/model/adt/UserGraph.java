@@ -1,7 +1,3 @@
-/**
- * This class defines the graph of users to be used in Recommend.java
- * @author Matthew Dombrady
- */
 
 package model.adt;
 
@@ -9,7 +5,10 @@ import java.util.ArrayList;
 
 import model.util.Bag;
 
-
+/**
+ * This class defines the graph of users to be used in Recommend.java
+ * @author Matthew Dombrady
+ */
 public class UserGraph {
 	
 	private final int V;

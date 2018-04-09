@@ -11,7 +11,11 @@ import model.adt.UserADT;
 import static org.junit.Assert.*;
 
 import java.util.ArrayList;
-
+/**
+ * A controller test sample
+ * @author sagar
+ *
+ */
 public class LibraryTest {
     @Test public void testSomeLibraryMethod() {
         Library classUnderTest = new Library();

@@ -27,10 +27,12 @@ import com.mongodb.MongoClientURI;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
 
+import data.ApplicationDetails;
 import model.adt.*;
 import model.adt.ClothesDryerADT;
 import model.util.Dataset;
 import model.util.MergeSort;
+import model.util.MongoAdapter;
 import model.FindAppliance;
 
 @RestController
@@ -159,8 +161,19 @@ public class ControllerTest {
     
     // I took out the parameter "index" cause it's only a 1D list now
     // I also changed the type of "a" to ApplianceReturn
-    /*
+    
     private void addMongo(String id, ApplianceReturn a) {
+    	try {
+    		MongoAdapter adapter = new MongoAdapter(ApplicationDetails.USERS_DB);
+    		UserADT user = adapter.getUser(id);
+    		user.getAppliances().add(a);
+    		adapter.updateUserApplianceList(user);
+    		adapter.close();
+    	} catch (Exception e) {
+
+    		e.printStackTrace();
+    	}
+    	/*
     	JsonParser parser = new JsonParser();
     	Gson gson = new Gson();
     	MongoClient client = new MongoClient(new MongoClientURI("mongodb://admin:flegends@ds119449.mlab.com:19449/enefficient-users"));
@@ -175,6 +188,7 @@ public class ControllerTest {
 		Document doc = Document.parse(json);
 		uCol.insertOne(doc);
 		client.close();
+		*/
     }
-    */
+    
 }

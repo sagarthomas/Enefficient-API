@@ -17,6 +17,7 @@ import com.mongodb.MongoURI;
 import com.mongodb.client.MongoDatabase;
 
 import app.ApplianceReturn;
+import data.ApplicationDetails;
 import model.adt.ApplianceADT;
 import model.adt.UserADT;
 import model.adt.UserGraph;
@@ -78,9 +79,32 @@ public class FakeUsers {
 		return fakeUsers;
 	}
 	
-	/*
+	
 	public static void main(String [] args) {
 		
+		ArrayList<ApplianceReturn> apps = new ArrayList<ApplianceReturn>();
+		//UserADT user = new UserADT("user32", "user32@gmail.com");
+		try {
+		MongoAdapter adp = new MongoAdapter(ApplicationDetails.USERS_DB);
+		//UserADT user = new UserADT("US5YEOOvrKYK4wL7L8FhElVm3Ev1", "sagarthomas27@hotmail.com");
+		//adp.addUser(user);
+		UserADT user1 = adp.getUser("US5YEOOvrKYK4wL7L8FhElVm3Ev1");
+		Dataset.init();
+		apps.add(new ApplianceReturn(Dataset.REFRIDGERATORS.get(1).getBRAND_NAME(), Dataset.REFRIDGERATORS.get(1).getMMODEL_NUM_1(), "Refridgerator", ((RefridgeratorADT)Dataset.REFRIDGERATORS.get(1)).getConsumption())); 
+		apps.add(new ApplianceReturn(Dataset.WASHERS.get(1).getBRAND_NAME(), Dataset.WASHERS.get(1).getMMODEL_NUM_1(), "Washer", ((WasherADT)Dataset.WASHERS.get(1)).getConsumption())); 
+		apps.add(new ApplianceReturn(Dataset.WASHER_DRYERS.get(1).getBRAND_NAME(), Dataset.WASHER_DRYERS.get(1).getMMODEL_NUM_1(), "Washer-Dryer", ((WasherDryerADT)Dataset.WASHER_DRYERS.get(1)).getConsumption())); 
+		user1.setAppliances(apps);
+		adp.updateUserApplianceList(user1);
+		adp.close();
+		
+			//MongoAdapter adapter = new MongoAdapter(ApplicationDetails.USERS_DB);
+			//adp.addUser(user);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		
+		/*
 		Gson gson = new Gson();
 		FakeUsers faker = new FakeUsers();
 		ArrayList<UserADT> users = faker.getFakeUsers();
@@ -103,8 +127,11 @@ public class FakeUsers {
 		}
 		
 		//client.close();
+		 
+		*/
+		
 	}
-	*/
+	
 	
 	
 	

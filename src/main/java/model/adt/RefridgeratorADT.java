@@ -1,10 +1,10 @@
+
+
+package model.adt;
 /**
  * This class defines the Refridgerator ADT which inherits from the ApplianceADT class.  It is used to store information about appliances from the refrigerators and wine chillers dataset
  * @author Matthew Dombrady 
  */
-
-package model.adt;
-
 public class RefridgeratorADT extends ApplianceADT {
 	
 	// These class variables contain every field from the appliances in the refrigerators and wine chillers dataset

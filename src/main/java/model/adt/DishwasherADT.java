@@ -1,10 +1,10 @@
+
+
+package model.adt;
 /**
  * This class defines the Dishwasher ADT which inherits from the ApplianceADT class.  It is used to store information about appliances from the dishwashers dataset
  * @author Matthew Dombrady
  */
-
-package model.adt;
-
 public class DishwasherADT extends ApplianceADT {
 	
 	// These class variables contain every field from appliances in the dishwashers dataset

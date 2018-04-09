@@ -14,7 +14,6 @@ import model.adt.UserADT;
 /**
  * UserAuth is used to add newly created accounts to the database in MLab
  * @author Sagar Thomas
- *
  */
 public class UserAuth {
 	

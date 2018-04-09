@@ -1,10 +1,10 @@
+
+
+package model.adt;
 /**
  * This class defines the Oven ADT which inherits from the ApplianceADT class.  It is used to store information about appliances from the ovens dataset
  * @author Matthew Dombrady
  */
-
-package model.adt;
-
 public class OvenADT extends ApplianceADT {
 	
 	// These class variables contain every field from the appliances in the ovens database

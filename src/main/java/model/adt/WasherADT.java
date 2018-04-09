@@ -1,10 +1,9 @@
+
+package model.adt;
 /**
  * This class defines the Washer ADT which inherits from the ApplianceADT class.  It is used to store information about appliances from the washers dataset
  * @author Matthew Dombrady
  */
-
-package model.adt;
-
 public class WasherADT extends ApplianceADT {
 	
 	// These class variables contain every field from the washers dataset

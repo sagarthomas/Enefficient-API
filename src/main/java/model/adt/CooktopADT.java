@@ -1,9 +1,9 @@
+
+package model.adt;
 /**
  * This class defines the Cooktop ADT which inherits from the ApplianceADT class.  It is used to store information about appliances from the cooktops dataset
  * @author Matthew Dombrady
  */
-
-package model.adt;
 
 public class CooktopADT extends ApplianceADT {
 	

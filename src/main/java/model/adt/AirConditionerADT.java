@@ -1,10 +1,11 @@
+
+
+package model.adt;
+
 /**
  * This class defines the Air Conditioner ADT which inherits from the ApplianceADT class.  It is used to store information about appliances from the air conditioner dataset
  * @author Matthew Dombrady
  */
-
-package model.adt;
-
 public class AirConditionerADT extends ApplianceADT {
 	
 	// These class variables contain every field from appliances in the air conditioner dataset
