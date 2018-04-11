@@ -17,36 +17,33 @@ import com.mongodb.MongoClientURI;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
 
+import data.ApplicationDetails;
+import exceptions.NoSuchDatabaseFound;
+import exceptions.NoSuchMethodForDatabase;
 import model.adt.ApplianceADT;
 import model.adt.Recommend;
 import model.adt.UserADT;
 import model.adt.UserGraph;
+import model.util.MongoAdapter;
 
 @RestController
 public class RecommendController {
 	
 	@RequestMapping(value = "/users/{id}/recommend")
-	public ApplianceReturn recomend(@PathVariable String id) {
+	public ApplianceReturn recomend(@PathVariable String id) throws NoSuchMethodForDatabase, NoSuchDatabaseFound {
 		//Init required variables
-		JsonParser parser = new JsonParser();
-		Gson gson = new Gson();
+		
 		
 		
 		//Get all list of users from Mongo
-		MongoClient client = new MongoClient(new MongoClientURI("mongodb://admin:flegends@ds119449.mlab.com:19449/enefficient-users"));
-		MongoDatabase db = client.getDatabase("enefficient-users");
+		//MongoClient client = new MongoClient(new MongoClientURI("mongodb://admin:flegends@ds119449.mlab.com:19449/enefficient-users"));
+		//MongoDatabase db = client.getDatabase("enefficient-users");
+		MongoAdapter adapter = new MongoAdapter(ApplicationDetails.USERS_DB);
 		
 		ArrayList<UserADT> users = new ArrayList<UserADT>();
 		
-		for(String userID : db.listCollectionNames()) {
-			//db.getCollection(userID).find().first().replace(key, value);
-			MongoCollection<Document> userCol = db.getCollection(userID);
-			JsonElement raw_user = parser.parse(new BasicDBObject(userCol.find().first()).toJson());
-			users.add(gson.fromJson(raw_user, UserADT.class));
-		}
-		
-		client.close();
-		
+		users = adapter.getAllUsers();
+		adapter.close();
 		UserGraph G = new UserGraph(users, 7);
 		Recommend r = new Recommend(G, id);
 		ApplianceReturn a = r.getReplace();

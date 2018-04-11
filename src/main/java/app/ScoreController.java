@@ -18,9 +18,11 @@ import com.mongodb.MongoClientURI;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
 
+import data.ApplicationDetails;
 import model.adt.ApplianceADT;
 import model.adt.UserADT;
 import model.util.CalculateScore;
+import model.util.MongoAdapter;
 /**
  * Spring controller that calculates and returns a specific user's score
  * @author Sagar Thomas
@@ -38,6 +40,7 @@ public class ScoreController {
 	 */
 	@RequestMapping("/users/{id}/score")
 	public double score(@PathVariable String id) {
+		/*
 		JsonParser parser = new JsonParser();
 		Gson gson = new Gson();
 		users = new ArrayList<UserADT>();
@@ -49,17 +52,29 @@ public class ScoreController {
 			users.add(gson.fromJson(raw_user, UserADT.class));
 		}
 		client.close();
-		
-		UserADT currentUser = users.get(0);
-		for (UserADT u : users) {
-			if (id.equals(u.getID())) {
-				currentUser = u;
-			}
-			CalculateScore.calcScore(u);
-			addMongo(u);
+		*/
+		try {
+			MongoAdapter adapter = new MongoAdapter(ApplicationDetails.USERS_DB);
+			UserADT currentUser = adapter.getUser(id);
+			
+			//UserADT currentUser = users.get(0);
+			/*
+			for (UserADT u : adapter.getAllUsers()) {
+				if (id.equals(u.getID())) {
+					currentUser = u;
+				}
+				CalculateScore.calcScore(u);
+				adapter.updateUserScore(currentUser);
+				//addMongo(u);
+			}*/
+			CalculateScore.calcScore(currentUser);
+			adapter.updateUserScore(currentUser);
+			adapter.close();
+			return currentUser.getScore();
+		} catch (Exception e) {
+			e.printStackTrace();
 		}
-		
-		return currentUser.getScore();
+		return 7.3;
 	}
 	
 	private void addMongo(UserADT u) {

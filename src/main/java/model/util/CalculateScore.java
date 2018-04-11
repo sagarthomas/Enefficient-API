@@ -26,7 +26,8 @@ public class CalculateScore {
 		
 		// This loop calculates the user's average energy usage
 		for (ApplianceReturn a : user.getAppliances()) {
-			average += Double.parseDouble(a.getConsumption());
+			average += (0.0036) * Double.parseDouble(a.getConsumption());
+			numberOfApps++;
 		}
 		
 		// The average
@@ -77,30 +78,30 @@ public class CalculateScore {
 				
 		if (diff > 0)
 			return 10;
-		else if (-5 <= diff && diff <= 0)
+		else if (-10 <= diff && diff <= 0)
 			return 9;
-		else if (-10 <= diff && diff <= -5)
+		else if (-50 <= diff && diff <= -11)
 			return 8;
-		else if (-15 <= diff && diff <= -11)
+		else if (-75 <= diff && diff <= -51)
 			return 7;
-		else if (-20 <= diff && diff <= -16)
+		else if (-100 <= diff && diff <= -76)
 			return 6;
-		else if (-25 <= diff && diff <= -21)
+		else if (-150 <= diff && diff <= -101)
 			return 5;
-		else if (-30 <= diff && diff <= -26)
+		else if (-250 <= diff && diff <= -151)
 			return 4;
-		else if (-35 <= diff && diff <= -31)
+		else if (-400 <= diff && diff <= -251)
 			return 3;
-		else if (-40 <= diff && diff <= -36)
+		else if (-500 <= diff && diff <= -401)
 			return 2;
-		else if (-45 <= diff && diff <= -41)
+		else if (-750 <= diff && diff <= -501)
 			return 1;
-		else if (diff <= -50)
+		else if (diff <= -751)
 			return 0;
 		
 		
 		
-		return 0;
+		return 1;
 					
 	}
 

@@ -94,6 +94,27 @@ public class MongoAdapter {
 		} else
 			throw new NoSuchMethodForDatabase(state + "does not have a method to add users!");
 	}
+	/**
+	 * Gets all users
+	 * @return list of users
+	 * @throws NoSuchMethodForDatabase thrown if wrong database is being used
+	 */
+	public ArrayList<UserADT> getAllUsers() throws NoSuchMethodForDatabase {
+		if (state.equals(ApplicationDetails.USERS_DB)) {
+			ArrayList<UserADT> users = new ArrayList<UserADT>();
+			for(String id : db.listCollectionNames()) {
+				try {
+					users.add(getUser(id));
+				} catch(Exception e) {
+					e.getMessage();
+					e.printStackTrace();
+				}
+			}
+			
+			return users;
+		} else
+			throw new NoSuchMethodForDatabase(state + "does not have a method to add users!");
+	}
 	
 	/**
 	 * Updates the user's appliance list
@@ -114,6 +135,23 @@ public class MongoAdapter {
 			BasicDBObject newDoc = new BasicDBObject();
 			newDoc.append("$set", new BasicDBObject().append("appliances", objs));
 			//Lets search for the correct user
+			BasicDBObject searchQuery = new BasicDBObject().append("uid", updatedUser.getID());
+			MongoCollection<Document> uCol = db.getCollection(updatedUser.getID());
+			uCol.updateOne(searchQuery, newDoc);
+			
+		} else 
+			throw new NoSuchMethodForDatabase();
+	}
+	
+	/**
+	 * Updates the user's score on the db
+	 * @param updatedUser the updated user
+	 * @throws NoSuchMethodForDatabase thrown if wrong database
+	 */
+	public void updateUserScore(UserADT updatedUser) throws NoSuchMethodForDatabase {
+		if (state.equals(ApplicationDetails.USERS_DB)) {
+			BasicDBObject newDoc = new BasicDBObject();
+			newDoc.append("$set", new BasicDBObject().append("score", updatedUser.getScore()));
 			BasicDBObject searchQuery = new BasicDBObject().append("uid", updatedUser.getID());
 			MongoCollection<Document> uCol = db.getCollection(updatedUser.getID());
 			uCol.updateOne(searchQuery, newDoc);
