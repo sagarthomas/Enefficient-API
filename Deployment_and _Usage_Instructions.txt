@@ -96,6 +96,8 @@ The API features are all mapped into specific URLs extending from the domain nam
           */users/user32/score--------------- Calculates the score and returns it
           
           */users/user32/recommend------------ Gives a recommendation for the user if applicable
+          
+          
                            
                            
                            
