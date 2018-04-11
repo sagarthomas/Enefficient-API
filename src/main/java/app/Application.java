@@ -18,7 +18,7 @@ public class Application {
 
 	/**
 	 * Main function that runs the Spring Application
-	 * @param args
+	 * @param args main arguments
 	 */
     public static void main(String[] args) {
     	System.setProperty("spring.jackson.serialization.INDENT_OUTPUT", "true");

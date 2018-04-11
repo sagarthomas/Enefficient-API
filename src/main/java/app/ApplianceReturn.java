@@ -1,12 +1,13 @@
+
+
+package app;
+
 /**
  * This class creates a simple object containing only the important information of an appliance.  This is so a minimally complex JSON can be passed to the front-end.
  * @author Matthew Dombrady
  */
-
-package app;
-
-// This is the object which will be returned to the controller as a result
 public class ApplianceReturn {
+	// This is the object which will be returned to the controller as a result
 	
 	// These class variables define the important information of an appliance to be passed to the front-end
 	private String brand, model, type, consumption;

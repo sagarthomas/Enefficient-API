@@ -1,0 +1,13 @@
+SFWR ENG 2XB3
+
+Matthew Dombrady | 400074666 | Tester, Researcher
+Sagar Thomas     | 400054333 | Project Leader, Programmer
+Ardhendu Barge   | 400066133 | Log admin, Designer
+
+The work that is being submitted is our group work alone with the exceptions of using APIs for MongoDB, JSON parsing and Spring as well as 
+implementing algorithms from Robert Sedgewick and Kevin Wayne's Algortihms's 4th Edition textbook which were customized to our need.
+	- 4/11/2018
+	
+*Note The dependencies for this application such as the Java MongoDB driver, GSON (Json parser) and Spring MVC are managed by the gradle build system
+and is therefore not present in the source code as a .jar or anything of the like. Please refer to out build.gradle file for the list of dependencies and
+their respective details.

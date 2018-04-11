@@ -4,6 +4,12 @@ import model.adt.*;
 import model.util.Dataset;
 import model.util.MergeSort;
 
+/**
+ * Old class for finding appliances
+ * @author Matthew Dombrady
+ *
+ */
+@Deprecated
 public class FindArray {
 	
 	private static ApplianceADT[] array;

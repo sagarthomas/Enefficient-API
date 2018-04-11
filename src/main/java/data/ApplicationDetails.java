@@ -1,5 +1,10 @@
 package data;
 
+/**
+ * Contains the details and constant values for this application
+ * @author Sagar Thomas
+ *
+ */
 public class ApplicationDetails {
 
 	// General

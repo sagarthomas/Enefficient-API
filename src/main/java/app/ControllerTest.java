@@ -1,7 +1,4 @@
-/**
- * This class is a Spring MVC controller which takes in details of an appliance and attempts to find it in the dataset
- * @author Matthew Dombrady
- */
+
 
 package app;
 
@@ -34,7 +31,10 @@ import model.util.Dataset;
 import model.util.MergeSort;
 import model.util.MongoAdapter;
 import model.FindAppliance;
-
+/**
+ * This class is a Spring MVC controller which takes in details of an appliance and attempts to find it in the dataset
+ * @author Matthew Dombrady
+ */
 @RestController
 public class ControllerTest {
 	

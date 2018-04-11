@@ -1,7 +1,6 @@
 package model.util;
 
-import java.io.FileNotFoundException;
-import java.io.FileReader;
+
 import java.util.ArrayList;
 
 import model.adt.*;
@@ -9,7 +8,6 @@ import com.google.gson.*;
 
 import org.bson.Document;
 import com.mongodb.BasicDBObject;
-import com.mongodb.DBCursor;
 import com.mongodb.MongoClient;
 import com.mongodb.MongoClientURI;
 import com.mongodb.client.FindIterable;

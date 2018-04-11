@@ -1,7 +1,3 @@
-/**
- * This class generates fake users for testing purposes
- * @author Matthew Dombrady
- */
 
 package model.util;
 
@@ -24,6 +20,10 @@ import model.adt.UserGraph;
 import model.adt.*;
 import model.util.Dataset;
 
+/**
+ * This class generates fake users for testing purposes
+ * @author Matthew Dombrady
+ */
 public class FakeUsers {
 	
 	// This array list will contain the fake users

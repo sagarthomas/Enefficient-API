@@ -1,7 +1,3 @@
-/**
- * This class uses the graph of users created in UserGraph.java to make appliance recommendations to the user
- * @author Matthew Dombrady
- */
 
 package model.adt;
 
@@ -10,7 +6,10 @@ import java.util.ArrayList;
 import app.ApplianceReturn;
 //import model.util.Bag;
 import model.util.Dataset;
-
+/**
+ * This class uses the graph of users created in UserGraph.java to make appliance recommendations to the user
+ * @author Matthew Dombrady
+ */
 public class Recommend {
 	
 	// currentUserId is the ID of the current user

@@ -1,7 +1,3 @@
-/**
- * This class searches the dataset for an appliance specified by the user
- * @author Matthew Dombrady
- */
 
 package model;
 
@@ -12,6 +8,11 @@ import model.adt.CooktopADT;
 import model.adt.RangeADT;
 import model.util.Dataset;
 import model.util.MergeSort;
+
+/**
+ * This class searches the dataset for an appliance specified by the user
+ * @author Matthew Dombrady
+ */
 
 public class FindAppliance {
 

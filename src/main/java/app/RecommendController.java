@@ -26,9 +26,21 @@ import model.adt.UserADT;
 import model.adt.UserGraph;
 import model.util.MongoAdapter;
 
+/**
+ * Spring MVC Controller to recommend an appliance the current user
+ * @author Matthew Dombrady, Sagar Thomas
+ *
+ */
 @RestController
 public class RecommendController {
 	
+	/**
+	 * Mapped Spring method for recommend 
+	 * @param id of the user
+	 * @return ApplianceReturn 
+	 * @throws NoSuchMethodForDatabase
+	 * @throws NoSuchDatabaseFound
+	 */
 	@RequestMapping(value = "/users/{id}/recommend")
 	public ApplianceReturn recomend(@PathVariable String id) throws NoSuchMethodForDatabase, NoSuchDatabaseFound {
 		//Init required variables
